@@ -22,33 +22,30 @@ module.exports = function (client) {
         const totalPlayChannel = client.channels.get('704519323087273995');
         // Updating stats every 30 seconds
         setInterval(function () {
-            console.log('Getting stats update..')
+            console.log('Getting stats update..');
+            rclient.get('ripple:online_users', (err, reply) => {
+                totalOnlineChannel.setName(`total online: ${reply}`)
+                    .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
+                    .catch(err => console.log(err));
+            });
 
-            let totalOnlineRedis;
-            let totalScoresRedis;
-            let totalPpRedis;
-            let totalPlayRedis;
+            rclient.get('ripple:submitted_scores', (err, reply) => {
+                totalScoresChannel.setName(`total scores: ${reply}`)
+                    .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
+                    .catch(err => console.log(err));
+            });
 
-            totalOnlineRedis = rclient.get('ripple:online_users', redis.print);
-            totalScoresRedis = rclient.get('ripple:submitted_scores', redis.print);
-            totalPpRedis = rclient.get('ripple:total_pp', redis.print);
-            totalPlayRedis = rclient.get('ripple:total_plays', redis.print);
+            rclient.get('ripple:total_pp', (err, reply) => {
+                totalPpChannel.setName(`total pp: ${reply}`)
+                    .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
+                    .catch(err => console.log(err));
+            });
 
-            totalOnlineChannel.setName(`total online: ${totalOnlineRedis}`)
-            .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
-            .catch(err=>console.log(err));
-
-            totalScoresChannel.setName(`total scores: ${totalScoresRedis}`)
-            .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
-            .catch(err=>console.log(err));
-
-            totalPpChannel.setName(`total totalpp: ${totalPpRedis}`)
-            .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
-            .catch(err=>console.log(err));
-
-            totalPlayChannel.setName(`total totalpp: ${totalPlayRedis}`)
-            .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
-            .catch(err=>console.log(err));
+            rclient.get('ripple:total_plays', (err, reply) => {
+                totalPlayChannel.setName(`total plays: ${reply}`)
+                    .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
+                    .catch(err => console.log(err));
+            });
         }, 30000)
     });
 }
