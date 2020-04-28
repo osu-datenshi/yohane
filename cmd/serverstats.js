@@ -1,54 +1,54 @@
 const Discord = require('discord.js');
 const redis = require('redis');
-const client = new Discord.Client();
-var rclient = require('redis').createClient({
-      host : 'datenshi.xyz',
-      port : 6379,
-      no_ready_check: true,
-      auth_pass: 'd@tenshi12'
+var rclient = redis.createClient({
+    host: 'datenshi.xyz',
+    port: 6379,
+    no_ready_check: true,
+    auth_pass: 'd@tenshi12'
 });
-
-client.on('error', function(err){
-    console.log('Error ' + err);
-});
-
-console.log('Connection is establishing now...');
-
-
-// Get our stats channels ID
-const totalonline = client.channels.get('704518817883226133');
-const totalscores = client.channels.get('704518891820286010');
-const totalpp = client.channels.get('704519257601343528');
-const totalplay = client.channels.get('704519323087273995');
 
 module.exports = function (client) {
-    client.on('message', async message => 
-    {
+
+    client.on('error', function (err) {
+        console.log('Error ' + err);
+    });
+
+    console.log('Connection is establishing now...');
+    client.on('message', async message => {
+        // Get our stats channels ID
+        const totalOnlineChannel = client.channels.get('704518817883226133');
+        const totalScoresChannel = client.channels.get('704518891820286010');
+        const totalPpChannel = client.channels.get('704519257601343528');
+        const totalPlayChannel = client.channels.get('704519323087273995');
         // Updating stats every 30 seconds
-        setInterval(function() {
+        setInterval(function () {
             console.log('Getting stats update..')
 
-        var totalonline = rclient.get("ripple:online_users", redis.print);
-        var totalscores = rclient.get("ripple:submitted_scores", redis.print);
-        var totalpp = rclient.get("ripple:total_pp", redis.print);
-        var totalplay = rclient.get("ripple:total_plays", redis.print);
+            let totalOnlineRedis;
+            let totalScoresRedis;
+            let totalPpRedis;
+            let totalPlayRedis;
 
-        // Set channel names
-        totalonline.setName("Total Online: " + totalonline)
-        .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-        .catch(console.error);
+            totalOnlineRedis = rclient.get('ripple:online_users', redis.print);
+            totalScoresRedis = rclient.get('ripple:submitted_scores', redis.print);
+            totalPpRedis = rclient.get('ripple:total_pp', redis.print);
+            totalPlayRedis = rclient.get('ripple:total_plays', redis.print);
 
-        totalscores.setName("Total Scores: " + totalscores)
-        .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-        .catch(console.error);
+            totalOnlineChannel.setName(`total online: ${totalOnlineRedis}`)
+            .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
+            .catch(err=>console.log(err));
 
-        totalpp.setName("Total PP: " + totalpp)
-        .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-        .catch(console.error);
+            totalScoresChannel.setName(`total scores: ${totalScoresRedis}`)
+            .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
+            .catch(err=>console.log(err));
 
-        totalplay.setName("Total Plays: " + totalplay)
-        .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-        .catch(console.error);
+            totalPpChannel.setName(`total totalpp: ${totalPpRedis}`)
+            .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
+            .catch(err=>console.log(err));
+
+            totalPlayChannel.setName(`total totalpp: ${totalPlayRedis}`)
+            .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
+            .catch(err=>console.log(err));
         }, 30000)
     });
 }
