@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
+const redis = require('redis');
 const client = new Discord.Client();
 var rclient = require('redis').createClient({
-      host : 'localhost',
+      host : 'datenshi.xyz',
       port : 6379,
       no_ready_check: true,
       auth_pass: ''
