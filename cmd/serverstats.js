@@ -4,7 +4,7 @@ var rclient = redis.createClient({
     host: 'datenshi.xyz',
     port: 6379,
     no_ready_check: true,
-    auth_pass: 'd@tenshi12'
+    auth_pass: ''
 });
 
 module.exports = function (client) {
@@ -24,25 +24,25 @@ module.exports = function (client) {
         setInterval(function () {
             console.log('Getting stats update..');
             rclient.get('ripple:online_users', (err, reply) => {
-                totalOnlineChannel.setName(`total online: ${reply}`)
+                totalOnlineChannel.setName(`In-Game Online: ${reply}`)
                     .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
                     .catch(err => console.log(err));
             });
 
-            rclient.get('ripple:submitted_scores', (err, reply) => {
-                totalScoresChannel.setName(`total scores: ${reply}`)
+            rclient.get('ripple:registered_users', (err, reply) => {
+                totalScoresChannel.setName(`Registered: ${reply}`)
                     .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
                     .catch(err => console.log(err));
             });
 
             rclient.get('ripple:total_pp', (err, reply) => {
-                totalPpChannel.setName(`total pp: ${reply}`)
+                totalPpChannel.setName(`Total PP: ${reply}`)
                     .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
                     .catch(err => console.log(err));
             });
 
             rclient.get('ripple:total_plays', (err, reply) => {
-                totalPlayChannel.setName(`total plays: ${reply}`)
+                totalPlayChannel.setName(`Total Plays: ${reply}`)
                     .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
                     .catch(err => console.log(err));
             });
