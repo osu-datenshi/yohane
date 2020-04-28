@@ -5,7 +5,7 @@ var rclient = require('redis').createClient({
       host : 'datenshi.xyz',
       port : 6379,
       no_ready_check: true,
-      auth_pass: ''
+      auth_pass: 'd@tenshi12'
 });
 
 client.on('error', function(err){
