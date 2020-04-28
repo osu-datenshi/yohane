@@ -29,7 +29,7 @@ module.exports = function (client) {
                     .catch(err => console.log(err));
             });
 
-            rclient.get('ripple:submitted', (err, reply) => {
+            rclient.get('ripple:submitted_scores', (err, reply) => {
                 totalScoresChannel.setName(`total scores: ${reply}`)
                     .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
                     .catch(err => console.log(err));
