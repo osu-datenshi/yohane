@@ -18,7 +18,7 @@ client.on('ready', () => {
             name: config.bot.game
         }
      });
-     client.channels.get(config.bot.general).send(`Yohane has started, with ${client.users.size} users in the Datenshi discord.`)
+     //client.channels.get(config.bot.general).send(`Yohane has started, with ${client.users.size} users in the Datenshi discord.`)
 });
 
 

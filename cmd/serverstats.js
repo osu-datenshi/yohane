@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
+const config = require("../config.json")
 const redis = require('redis');
 var rclient = redis.createClient({
-    host: 'datenshi.xyz',
+    host: (config.redisserver.host),
     port: 6379,
-    no_ready_check: true,
-    auth_pass: ''
+    auth_pass: (config.redisserver.password)
 });
 
 module.exports = function (client) {
@@ -16,10 +16,10 @@ module.exports = function (client) {
     console.log('Connection is establishing now...');
     client.on('message', async message => {
         // Get our stats channels ID
-        const totalOnlineChannel = client.channels.get('704518817883226133');
-        const totalScoresChannel = client.channels.get('704518891820286010');
-        const totalPpChannel = client.channels.get('704519257601343528');
-        const totalPlayChannel = client.channels.get('704519323087273995');
+        const totalOnlineChannel = client.channels.get(config.bot.totalonlinech);
+        const totalRegisterChannel = client.channels.get(config.bot.totalregisterch);
+        const totalPpChannel = client.channels.get(config.bot.totalppch);
+        const totalPlayChannel = client.channels.get(config.bot.totalplaych);
         // Updating stats every 30 seconds
         setInterval(function () {
             console.log('Getting stats update..');
@@ -30,7 +30,7 @@ module.exports = function (client) {
             });
 
             rclient.get('ripple:registered_users', (err, reply) => {
-                totalScoresChannel.setName(`Registered: ${reply}`)
+                totalRegisterChannel.setName(`Registered: ${reply}`)
                     .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
                     .catch(err => console.log(err));
             });
@@ -46,7 +46,7 @@ module.exports = function (client) {
                     .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
                     .catch(err => console.log(err));
             });
-        }, 30000)
+        }, 300000)
     });
 }
 
