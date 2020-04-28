@@ -36,5 +36,5 @@ require("./cmd/getUserStatsRelax")(client)
 // Information
 require("./cmd/faq")(client)
 // Player Reporting
-require("./cmd/pr")(client)
-require("./handlers/playerReportingListener")(client)
+//require("./cmd/pr")(client)
+//require("./handlers/playerReportingListener")(client)

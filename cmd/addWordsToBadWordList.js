@@ -4,9 +4,9 @@ const fs = require('fs');
 module.exports = function(client) {
     client.on('message', async message => {
         //debug id null
-        console.log({
-            message,
-        });
+        //console.log({
+        //    message,
+        //});
         if (message.content.startsWith(config.bot.prefix + "nazi add")) {
             if (message.member.id != config.bot.owner_id) { return message.channel.send("This is reserved for ilyt, sorry!") }
             // Please make a PR and help me fix this
