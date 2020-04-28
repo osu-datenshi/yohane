@@ -1,53 +1,70 @@
-const Discord = require('discord.js');
 const config = require("../config.json")
 const redis = require('redis');
-var rclient = redis.createClient({
+const { promisify } = require("util");
+
+const redisClient = redis.createClient({
     host: (config.redisserver.host),
     port: 6379,
     auth_pass: (config.redisserver.password)
 });
+const redisGetAsync = promisify(redisClient.get).bind(redisClient);
 
-module.exports = function (client) {
+const changeChannelName = async (channel, channelName) => {
+    const newChannel = await channel.setName(channelName);
+    console.log(`stat channel renamed to: ${newChannel.name}`);
+    return true;
+}
+
+module.exports = (client) => {
+    console.log('Establishing connection...');
 
     client.on('error', function (err) {
         console.log('Error ' + err);
     });
 
-    console.log('Connection is establishing now...');
-    client.on('message', async message => {
-        // Get our stats channels ID
-        const totalOnlineChannel = client.channels.get(config.bot.totalonlinech);
-        const totalRegisterChannel = client.channels.get(config.bot.totalregisterch);
-        const totalPpChannel = client.channels.get(config.bot.totalppch);
-        const totalPlayChannel = client.channels.get(config.bot.totalplaych);
+    client.on('ready', async () => {
+        const stats = [
+            {
+                channel: client.channels.get(config.bot.totalonlinech),
+                namePrefix: 'In-Game Online: ',
+                redisKey: 'ripple:online_users',
+            },
+            {
+                channel: client.channels.get(config.bot.totalregisterch),
+                namePrefix: 'Total Plays: ',
+                redisKey: 'ripple:registered_users',
+            },
+            {
+                channel: client.channels.get(config.bot.totalppch),
+                namePrefix: 'Total PP: ',
+                redisKey: 'ripple:total_pp',
+            },
+            {
+                channel: client.channels.get(config.bot.totalplaych),
+                namePrefix: 'Registered: ',
+                redisKey: 'ripple:total_plays',
+            },
+        ];
+        const updateDiscord = async () => {
+            const test = await redisGetAsync('ripple:online_users');
+
+            console.log('Getting server stats updates...');
+
+            const replies = await Promise.all(stats.map(stat => redisGetAsync(stat.redisKey)));
+            const result = await Promise.all(stats.map((stat, index) => changeChannelName(stat.channel, `${stat.namePrefix}${replies[index]}`)));
+
+            if (result.filter(each => each).length === stats.length) {
+                console.log('Successfully updated server stats on discord!');
+            } else {
+                console.log('Something went wrong when updating server stats on discord');
+            }
+        };
+
+        console.log('Connection established!');
+        await updateDiscord();
+
         // Updating stats every 30 seconds
-        setInterval(function () {
-            console.log('Getting stats update..');
-            rclient.get('ripple:online_users', (err, reply) => {
-                totalOnlineChannel.setName(`In-Game Online: ${reply}`)
-                    .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
-                    .catch(err => console.log(err));
-            });
-
-            rclient.get('ripple:registered_users', (err, reply) => {
-                totalRegisterChannel.setName(`Registered: ${reply}`)
-                    .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
-                    .catch(err => console.log(err));
-            });
-
-            rclient.get('ripple:total_pp', (err, reply) => {
-                totalPpChannel.setName(`Total PP: ${reply}`)
-                    .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
-                    .catch(err => console.log(err));
-            });
-
-            rclient.get('ripple:total_plays', (err, reply) => {
-                totalPlayChannel.setName(`Total Plays: ${reply}`)
-                    .then(newChannel => console.log(`stat channel renamed to: ${newChannel.name}`))
-                    .catch(err => console.log(err));
-            });
-        }, 300000)
+        setInterval(updateDiscord, 30 * 1000);
     });
 }
-
 
