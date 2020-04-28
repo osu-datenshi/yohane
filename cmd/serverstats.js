@@ -31,7 +31,7 @@ module.exports = (client) => {
             },
             {
                 channel: client.channels.get(config.bot.totalregisterch),
-                namePrefix: 'Total Plays: ',
+                namePrefix: 'Registered: ',
                 redisKey: 'ripple:registered_users',
             },
             {
@@ -41,7 +41,7 @@ module.exports = (client) => {
             },
             {
                 channel: client.channels.get(config.bot.totalplaych),
-                namePrefix: 'Registered: ',
+                namePrefix: 'Total Plays: ',
                 redisKey: 'ripple:total_plays',
             },
         ];
