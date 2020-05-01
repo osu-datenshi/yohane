@@ -61,7 +61,12 @@ module.exports = (client) => {
         };
 
         console.log('Connection established!');
-        await updateDiscord();
+        await updateDiscord().finally(() => {
+            /**
+             * dont forget to quit connection
+             */
+            redisClient.quit();
+        });
 
         // Updating stats every 30 seconds
         setInterval(updateDiscord, 30 * 1000);
