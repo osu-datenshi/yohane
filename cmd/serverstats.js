@@ -15,7 +15,7 @@ const changeChannelName = async (channel, channelName) => {
     return true;
 }
 
-module.exports = (client) => {z
+module.exports = (client) => {
     console.log('Establishing connection...');
 
     client.on('error', function (err) {
