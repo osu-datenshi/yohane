@@ -15,7 +15,7 @@ const changeChannelName = async (channel, channelName) => {
     return true;
 }
 
-module.exports = (client) => {
+module.exports = (client) => {z
     console.log('Establishing connection...');
 
     client.on('error', function (err) {
@@ -64,7 +64,7 @@ module.exports = (client) => {
         await updateDiscord();
 
         // Updating stats every 30 seconds
-        setInterval(updateDiscord, 30 * 1000);
+        setInterval(updateDiscord, 5 * 60 * 1000);
     });
 }
 
