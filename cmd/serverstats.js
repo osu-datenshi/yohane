@@ -14,6 +14,7 @@ const changeChannelName = async (channel, channelName) => {
     console.log(`stat channel renamed to: ${newChannel.name}`);
     return true;
 }
+const formatNumber = (num) => (num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
 
 module.exports = (client) => {
     console.log('Establishing connection...');
@@ -51,7 +52,7 @@ module.exports = (client) => {
             console.log('Getting server stats updates...');
 
             const replies = await Promise.all(stats.map(stat => redisGetAsync(stat.redisKey)));
-            const result = await Promise.all(stats.map((stat, index) => changeChannelName(stat.channel, `${stat.namePrefix}${replies[index]}`)));
+            const result = await Promise.all(stats.map((stat, index) => changeChannelName(stat.channel, `${stat.namePrefix}${formatNumber(replies[index])}`)));
 
             if (result.filter(each => each).length === stats.length) {
                 console.log('Successfully updated server stats on discord!');
