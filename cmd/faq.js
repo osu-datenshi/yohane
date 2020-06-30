@@ -50,7 +50,11 @@ module.exports = function (client) {
 		.addField("Apakah bisa wipe account?", "Sayang sekali, wipe account untuk donatur saja, Wipe account bisa juga ketika dalam kondisi tertentu seperti score erorr dan sebagainya.")
 		.addField("Cara bikin clan?", "Untuk saat ini pembuatan clan hanya dilakukan oleh donatur saja, akan dibuka untuk umum bila pada waktunya diumumkan kembali lewat announcement")
 		.addField("Cara report akun gimana?", "Gunakan !report namaakun reason lewat in-game, bisa dilakukan via Discord dengan cara kontak Admin melalui PM")
-		.addField("Cara Donasi ??", "kontak @Owner atau @Community Manager")
+	    } else if (msg.toLowerCase() == "donate") {
+		embed.setTitle("Donate")
+		.addField("Bagaimana cara donasi?", "silahkan menuju link https://trakteer.id/osudatenshi, hasil donasi akan sepenuhnya dipakai untuk biaya server")
+		.addField("Harga berapa?", "Rp. 20.000/bulan")
+		.addField("Keuntungan Donasi?", "Changename unlimited, Create Clan, Changename Clan (Leader), Background Clan, Profile Background (Web), RGB Name (Web), Donat Badges, Verified Tenshi Badges, Yellow Username (In-game), Get Access #request-cepat, Discord Roles, Request Wipe Account, Full Support") 
             } else if (msg.toLowerCase() == "help") {
                 embed.setTitle("FAQ Help")
                 .setDescription("Gunakan @faq help untuk melihat command.")
@@ -60,6 +64,7 @@ module.exports = function (client) {
                 .addField("Cert", "Menjelaskan kenapa tidak bisa menginstall Certificate.")
                 .addField("Hosts", "Menjelaskan kenapa file hosts error.")
                 .addField("help", "Menampilkan help")
+		.addField("donate", "Cara donasi")
 		.addField("vpn", "menampilkan tutorial vpn")
 		.addField("umum", "menampilkan pertanyaan umum")
 		.addField("map", "menampilkan beatmap help")
