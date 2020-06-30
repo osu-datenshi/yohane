@@ -10,9 +10,9 @@ module.exports = function (client) {
             let hex = parseInt(color.replace(/^#/, ''), 16);
             
             const embed = new Discord.RichEmbed()
-            .setTitle("New Report")
+            .setTitle("New Report by " + message.member.nickname)
 	    .setColor(hex)
-            .addField("Text", "```"+message.content+"```")
+            .setDescription("```"+message.content+"```")
             client.channels.get(config.bot.staff_general).send(embed)
             message.delete();
         }
