@@ -39,3 +39,6 @@ require("./cmd/serverstats")(client)
 // Player Reporting
 require("./cmd/pr")(client)
 require("./handlers/playerReportingListener")(client)
+// Beatmap Request
+require("./cmd/bmreq")(client)
+require("./handlers/breqhandler")(client)
