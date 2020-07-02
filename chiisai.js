@@ -12,12 +12,7 @@ global.naughtyWords = config.blacklisted_words;
 
 client.on('ready', () => {
     console.log(`Yohane has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
-    client.user.setPresence({ 
-        status: 'online', 
-        game: { 
-            name: config.bot.game
-        }
-     });
+    client.user.setActivity("DATENSHI", {type: "WATCHING"});
      //client.channels.get(config.bot.general).send(`Yohane has started, with ${client.users.size} users in the Datenshi discord.`)
 });
 
@@ -42,3 +37,6 @@ require("./handlers/playerReportingListener")(client)
 // Beatmap Request
 require("./cmd/bmreq")(client)
 require("./handlers/breqhandler")(client)
+// Top play submit
+require("./cmd/topplay")(client)
+require("./handlers/tophandler")(client)

@@ -5,7 +5,7 @@ const config = require("../config.json")
 
 module.exports = function (client) {
     client.on("message", async message => {
-        if (message.content.startsWith(config.bot.prefix + "recent vanilla")) {
+        if (message.content.toLowerCase().startsWith(config.bot.prefix + "recent vanilla")) {
             var msg = message.content;
             msg = msg.split(config.bot.prefix + "recent vanilla ");
             msg = msg[1];
