@@ -12,7 +12,7 @@ module.exports = function (client) {
 			const embed = new Discord.RichEmbed()
 			.setTitle("New Request by " + message.member.nickname)
 			.setColor(hex)
-			.setDescription("```"+message.content+"```")
+			.setDescription(message.content)
 			client.channels.get(config.bot.bat).send(embed)
 			message.delete();
 		}

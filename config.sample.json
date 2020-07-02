@@ -15,5 +15,5 @@
 		"password": "",
 		"database": ""
     },
-    "blacklisted_words": ["akatsuki", "ainu", "kotorikku", "kawata", "toh.ru", "ryusei", "ryu-sei", "waving", "enjuu", "verge", "toh ru", "toh-ru", "email verify", "email", "email verification", "drop", "drop database", "drop database ripple", "drop database ripple;"]
+    "blacklisted_words": ["crot"]
 }
