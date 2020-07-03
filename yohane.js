@@ -32,7 +32,7 @@ client.on('guildMemberAdd', async member => {
 	const channel = member.guild.channels.find(ch => ch.name === 'join-user');
 	if (!channel) return;
 
-	const canvas = Canvas.createCanvas(700, 250);
+	const canvas = Canvas.createCanvas(700, 200);
 	const ctx = canvas.getContext('2d');
 
 	const background = await Canvas.loadImage('./welcome.jpg');
@@ -41,25 +41,31 @@ client.on('guildMemberAdd', async member => {
 	ctx.strokeStyle = '#74037b';
 	ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-	ctx.font = '28px sans-serif';
+	ctx.font = '25px sans-serif';
 	ctx.fillStyle = '#ffffff';
-	ctx.fillText('Welcome to Datenshi,', canvas.width / 2.5, canvas.height / 3.5);
+	ctx.fillText('Welcome to Datenshi', canvas.width / 2.5, canvas.height / 2.5);
 
 	ctx.font = applyText(canvas, `${member.displayName}!`);
 	ctx.fillStyle = '#ffffff';
-	ctx.fillText(`${member.displayName}!`, canvas.width / 2.5, canvas.height / 1.8);
+	ctx.fillText(`${member.displayName}!`, canvas.width / 2.5, canvas.height / 1.5);
 
 	ctx.beginPath();
-	ctx.arc(125, 125, 100, 0, Math.PI * 2, true);
+	ctx.arc(140, 140, 200, 0, Math.PI * 2, false);
 	ctx.closePath();
 	ctx.clip();
 
 	const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-	ctx.drawImage(avatar, 25, 25, 200, 200);
+	ctx.drawImage(avatar, 100, 25, 150, 150);
 
 	const attachment = new Discord.Attachment(canvas.toBuffer(), 'welcome-image.png');
 
-	channel.send(`Welcome to Datenshi, ${member}!`, attachment);
+	channel.send(attachment);
+});
+
+client.on('message', async message => {
+    if (message.content === 'oci') {
+        client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
+    }
 });
 
 // Check if any naughty words are in the bot.
