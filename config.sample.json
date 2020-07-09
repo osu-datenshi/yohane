@@ -4,16 +4,26 @@
         "player-reports": "",
         "staff_general": "",
         "owner_id": "",
+	"bat": "",
         "announcements": "",
         "general": "",
+	"topplay": "",
+	"wiperequests": "",
+	"totalonlinech": "",
+	"totalregisterch": "",
+	"totalppch": "",
+	"totalplaych": "",
         "game": "osu!",
         "prefix": ""
     },
     "db": {
         "host": "localhost",
-		"username": "root",
-		"password": "",
-		"database": ""
+	"username": "root",
+	"password": "",
+	"database": ""
     },
+    "rdisserver": {
+	"host": "localhost",
+	"password": "crot"
     "blacklisted_words": ["crot"]
 }

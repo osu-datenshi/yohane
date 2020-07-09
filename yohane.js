@@ -13,7 +13,7 @@ global.naughtyWords = config.blacklisted_words;
 
 client.on('ready', () => {
     console.log(`Yohane has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
-    client.user.setActivity("DATENSHI", {type: "WATCHING"});
+    client.user.setActivity("DATENSHI", {type: "WATCHING", url: "https://datenshi.xyz"});
      //client.channels.get(config.bot.general).send(`Yohane has started, with ${client.users.size} users in the Datenshi discord.`)
 });
 
@@ -62,10 +62,21 @@ client.on('guildMemberAdd', async member => {
 	channel.send(attachment);
 });
 
+//BUAT TEST
 client.on('message', async message => {
-    if (message.content === 'oci') {
-        client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
+    if (message.content === 'crot') {
+	//Buat test welcome
+        //client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
+	message.channel.send({files: [ "https://i.kym-cdn.com/photos/images/newsfeed/001/855/335/20c.jpg" ] });
     }
+});
+
+client.on('message', async message => {
+    switch(message.content) {
+    case "hello": case "hai": case "hi": case "halo": case "helo":
+	message.channel.send(`Hello <@${message.author.id}>!`);
+	break;
+    };
 });
 
 // Check if any naughty words are in the bot.
@@ -91,3 +102,6 @@ require("./handlers/breqhandler")(client)
 // Top play submit
 require("./cmd/topplay")(client)
 require("./handlers/tophandler")(client)
+// WIpe requests
+require("./cmd/wipereq")(client)
+require("./handlers/wiperequest")(client)
