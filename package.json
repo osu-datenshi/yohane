@@ -1,21 +1,21 @@
 {
-  "name": "chiisai",
+  "name": "yohane",
   "version": "1.0.0",
-  "description": "The discord bot for osu!Yozora",
-  "main": "chiisai.js",
+  "description": "kostum discord bot untuk datenshi",
+  "main": "yohane.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/osuYozora/chiisai.git"
+    "url": "git+https://github.com/osu-datenshi/yohane.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/osuYozora/chiisai/issues"
+    "url": "https://github.com/osu-datenshi/yohane/issues"
   },
-  "homepage": "https://github.com/osuYozora/chiisai#readme",
+  "homepage": "https://github.com/osu-datenshi/yohane#readme",
   "dependencies": {
     "discord.js": "^11.4.2",
     "mysql": "^2.16.0",
