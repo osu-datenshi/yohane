@@ -4,7 +4,7 @@ const config = require("../config.json")
 
 module.exports = function (client) {
     client.on("message", async message => {
-        if (message.channel.name === "report-by-user") {
+        if (message.channel.id === (config.bot.reportchannel)) {
             if (message.author.bot) { return }
             let color = randomcolor_1.randomColor();
             let hex = parseInt(color.replace(/^#/, ''), 16);
