@@ -79,6 +79,27 @@ client.on('message', async message => {
     };
 });
 
+client.on('message', async message => {
+    if (message.content.startsWith("@say")) {
+      if (message.member.id != config.bot.owner_id) { return message.channel.send("This is reserved for ilyt, sorry!") }
+      // Get the channel mention
+      if (message.mentions.channels.size == 0) {
+          message.reply("please mention a channel first.");
+      }
+      else {
+          let targetChannel = message.mentions.channels.first();
+          // Get the message to print
+
+          const args = message.content.split(" ").slice(2);
+          let saytext = args.join(" ");
+          targetChannel.send(saytext);
+          message.delete();
+      }
+   }
+});
+//Music
+require("./music/main")(client)
+
 // Check if any naughty words are in the bot.
 require("./handlers/noBadWordsCheck")(client)
 require("./cmd/addWordsToBadWordList")(client)
