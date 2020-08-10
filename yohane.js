@@ -99,7 +99,9 @@ client.on('message', async message => {
 });
 //Music
 require("./music/main")(client)
-
+//VERIFY
+require("./cmd/verifytoken.js")(client)
+require("./cmd/getroles.js")(client)
 // Check if any naughty words are in the bot.
 require("./handlers/noBadWordsCheck")(client)
 require("./cmd/addWordsToBadWordList")(client)
