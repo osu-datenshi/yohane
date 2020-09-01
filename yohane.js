@@ -67,7 +67,7 @@ client.on('message', async message => {
     if (message.content === 'crot') {
 	//Buat test welcome
         //client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
-	message.channel.send({files: [ "https://i.kym-cdn.com/photos/images/newsfeed/001/855/335/20c.jpg" ] });
+	message.channel.send({files: [ "https://i.kym-cdn.com/photos/images/facebook/001/855/345/2ad.jpg" ] });
     }
 });
 
@@ -98,7 +98,7 @@ client.on('message', async message => {
    }
 });
 //Music
-require("./music/main")(client)
+//require("./music/main")(client)
 //VERIFY
 require("./cmd/verifytoken.js")(client)
 require("./cmd/getroles.js")(client)

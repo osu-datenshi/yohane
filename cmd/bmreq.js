@@ -5,6 +5,7 @@ const config = require("../config.json")
 module.exports = function (client) {
 	client.on("message", async message => {
 		if (message.content.startsWith(config.bot.prefix + "breq")) {
+		if (message.member.id != config.bot.owner_id) { return message.channel.send("This is reserved for ilyt, sorry!") }
 			let color = randomcolor_1.randomColor();
 			let hex = parseInt(color.replace(/^#/, ''), 16);
 
