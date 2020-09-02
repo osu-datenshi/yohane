@@ -15,7 +15,7 @@ module.exports = function (client) {
 
                 let color = randomcolor_1.randomColor();
                 let hex = parseInt(color.replace(/^#/, ''), 16);
-                const embed = new Discord.RichEmbed()
+                const embed = new Discord.MessageEmbed()
                     .setTitle("Stats for " + msg)
                     .setURL("https://datenshi.xyz/u/" + user[0].id)
                     .setColor(hex)

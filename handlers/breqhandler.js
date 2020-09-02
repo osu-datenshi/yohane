@@ -9,11 +9,11 @@ module.exports = function (client) {
 			let color = randomcolor_1.randomColor();
 			let hex = parseInt(color.replace(/^#/, ''), 16);
 
-			const embed = new Discord.RichEmbed()
+			const embed = new Discord.MessageEmbed()
 			.setTitle("New Request by " + message.member.nickname)
 			.setColor(hex)
 			.setDescription(message.content)
-			client.channels.get(config.bot.bat).send(embed)
+			client.channels.cache.get(config.bot.bat).send(embed)
 			message.delete();
 		}
 	})

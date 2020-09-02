@@ -11,7 +11,7 @@ module.exports = function (client) {
                 msg = msg[1];
                 try {
                     var user = await query("SELECT * FROM discord_tokens WHERE token = ?", msg);
-		    var getname = await query("SELECT * FROM users WHERE id = ?", user[0].userid)
+		            var getname = await query("SELECT * FROM users WHERE id = ?", user[0].userid)
 
                     message.channel.send("Hi, " + getname[0].username + "! Thank you for verifying with us! You may now speak in all text channels.");
                     client.guilds.get("698502951232077874").member(message.author).addRole("707470790169198643");

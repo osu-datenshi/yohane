@@ -26,22 +26,22 @@ module.exports = (client) => {
     client.on('ready', async () => {
         const stats = [
             {
-                channel: client.channels.get(config.bot.totalonlinech),
+                channel: client.channels.cache.get(config.bot.totalonlinech),
                 namePrefix: 'In-Game Online: ',
                 redisKey: 'ripple:online_users',
             },
             {
-                channel: client.channels.get(config.bot.totalregisterch),
+                channel: client.channels.cache.get(config.bot.totalregisterch),
                 namePrefix: 'Registered: ',
                 redisKey: 'ripple:registered_users',
             },
             {
-                channel: client.channels.get(config.bot.totalppch),
+                channel: client.channels.cache.get(config.bot.totalppch),
                 namePrefix: 'Total PP: ',
                 redisKey: 'ripple:total_pp',
             },
             {
-                channel: client.channels.get(config.bot.totalplaych),
+                channel: client.channels.cache.get(config.bot.totalplaych),
                 namePrefix: 'Total Plays: ',
                 redisKey: 'ripple:total_plays',
             },

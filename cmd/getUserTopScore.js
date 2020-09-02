@@ -15,12 +15,12 @@ module.exports = function (client) {
                 let color = randomcolor_1.randomColor();
                 let hex = parseInt(color.replace(/^#/, ''), 16);
                 
-                const embed = new Discord.RichEmbed()
+                const embed = new Discord.MessageEmbed()
                     .setTitle("Top Score For " + msg)
                     .setURL("https://datenshi.xyz/u/" + recentScore[0].userid)
                     .setColor(hex)
                     .setDescription(recentScore[0].song_name)
-		    .setThumbnail("https://a.datenshi.xyz/" + user[0].id)
+		            .setThumbnail("https://a.datenshi.xyz/" + user[0].id)
                     .setImage("https://assets.ppy.sh/beatmaps/" + recentScore[0].beatmapset_id + "/covers/cover.jpg")
                     .addField("PP:", recentScore[0].pp)
                     .addField("Score:", recentScore[0].score)

@@ -17,16 +17,12 @@
   },
   "homepage": "https://github.com/osu-datenshi/yohane#readme",
   "dependencies": {
-    "discord.js": "^11.4.2",
-    "mysql": "^2.16.0",
-    "randomcolor": "^0.5.3",
+    "discord.js": "^12.3.1",
+    "mysql": "^2.18.1",
+    "randomcolor": "^0.6.2",
     "redis": "^3.0.2",
-    "simple-youtube-api": "^5.0.2",
-    "youtube-info": "^1.2.0",
-    "opusscript": "^0.0.6",
-    "get-youtube-id": "^1.0.0",
-    "sqlstring": "^2.3.1",
+    "sqlstring": "^2.3.2",
     "canvas": "^2.6.1",
-    "ytdl-core": "^3.2.0"
+    "node-rest-client": "^3.1.0"
   }
 }
