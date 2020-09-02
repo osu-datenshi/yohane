@@ -58,7 +58,7 @@ module.exports = function (client) {
 		        embed.setTitle("Donate")
 		        .addField("How to donate?", "You can donate by using `Indonesian Local Payment` or `PayPal`")
                 .addField("How much?", "20.000 IDR/month\n$ 1.36/month")
-                .addField("Links", "`[PayPal](https://paypal.me/ochidarma?locale.x=id_ID)`\n`[Trakteer.id](https://trakteer.id/osudatenshi)`")
+                .addField("Links", "[PayPal](https://paypal.me/ochidarma?locale.x=id_ID)\n[Trakteer.id](https://trakteer.id/osudatenshi)")
 		        .addField("Feature?", "- Changename unlimited\n- Create Clan\n- Changename Clan (Leader)\n- Background Clan\n- Profile Background (Web)\n- RGB Name (Web)\n- Donat Badges\n- Yellow Username (In-game)\n- Get Access VIP Channel\n- Discord Roles\n- Full Support") 
             } else if (msg.toLowerCase() == "help") {
                 embed.setTitle("FAQ Help")
