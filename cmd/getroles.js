@@ -9,12 +9,12 @@ module.exports = function (client) {
 			let color = randomcolor_1.randomColor();
 			let hex = parseInt(color.replace(/^#/, ''), 16);
 
-			const embed = new Discord.RichEmbed()
+			const embed = new Discord.MessageEmbed()
 			.setTitle("Roles Request Channel")
 			.setColor(hex)
-            		.addField("Information", "This is channels is closed, we are moving the new system for getting new roles!!")
-            		.addField("How to Get?", "You can get the roles from [This Page](https://datenshi.xyz/discordtokens), you must login or create the account in the website before generate new token!")
-            		.addField("Can i Ask?", "No, Just follow easy steps on the website! Enjoy")
+            .addField("Information", "This is channels is closed, we are moving the new system for getting new roles!!")
+            .addField("How to Get?", "You can get the roles from [This Page](https://datenshi.xyz/discordtokens), you must login or create the account in the website before generate new token!")
+            .addField("Can i Ask?", "No, Just follow easy steps on the website! Enjoy")
 			message.channel.send(embed)
 		}
 	})

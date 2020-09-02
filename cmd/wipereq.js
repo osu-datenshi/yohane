@@ -8,7 +8,7 @@ module.exports = function (client) {
 			let color = randomcolor_1.randomColor();
 			let hex = parseInt(color.replace(/^#/, ''), 16);
 
-			const embed = new Discord.RichEmbed()
+			const embed = new Discord.MessageEmbed()
 			.setTitle("Wipe Account & Delete Score Requests")
 			.setColor(hex)
 			.addField("Information", "**Please Read before Requests!!**\nThis channel are only for <@&699280489164308541>! You can chose to wipe all your account or select a specific mode or specific score at some beatmap in there! You need to wait after submitting your requests and we need check the scores in database")

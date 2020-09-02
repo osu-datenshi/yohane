@@ -12,7 +12,7 @@ global.naughtyWords = config.blacklisted_words;
 
 
 client.on('ready', () => {
-    console.log(`Yohane has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
+    console.log(`Yohane has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`); 
     client.user.setActivity("DATENSHI", {type: "WATCHING", url: "https://datenshi.xyz"});
      //client.channels.get(config.bot.general).send(`Yohane has started, with ${client.users.size} users in the Datenshi discord.`)
 });
@@ -99,6 +99,8 @@ client.on('message', async message => {
 });
 //Music
 //require("./music/main")(client)
+//Admin
+require("./administrator/ban.js")(client)
 //VERIFY
 require("./cmd/verifytoken.js")(client)
 require("./cmd/getroles.js")(client)
