@@ -9,6 +9,8 @@ module.exports = function (client) {
                 var msg = message.content;
                 msg = msg.split(config.bot.prefix + "verify ");
                 msg = msg[1];
+		if (msg === "") { return message.channel.send("Error, You are not fill the token.") }
+            	if (msg === undefined) { return message.channel.send("This is not a valid option.") }
                 try {
                     var user = await query("SELECT * FROM discord_tokens WHERE token = ?", msg);
 		            var getname = await query("SELECT * FROM users WHERE id = ?", user[0].userid)
