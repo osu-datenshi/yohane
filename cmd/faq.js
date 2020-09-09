@@ -58,11 +58,11 @@ module.exports = function (client) {
 	        embed.setTitle("Donate")
 	        .addField("How to donate?", "You can donate by using `Indonesian Local Payment` or `PayPal`")
                 .addField("How much?", "20.000 IDR/month\n$ 1.36/month")
-                .addField("Links", "[PayPal](https://paypal.me/ochidarma?locale.x=id_ID)\n[Trakteer.id](https://trakteer.id/osudatenshi)")
+                .addField("Links", "[`PayPal`](https://paypal.me/ochidarma?locale.x=id_ID)\n[`Trakteer.id`](https://trakteer.id/osudatenshi)")
 	        .addField("Feature?", "- Changename unlimited\n- Create Clan\n- Changename Clan (Leader)\n- Background Clan\n- Profile Background (Web)\n- RGB Name (Web)\n- Donat Badges\n- Yellow Username (In-game)\n- Get Access VIP Channel\n- Discord Roles\n- Full Support") 
             } else if (msg.toLowerCase() == "help") {
                 embed.setTitle("FAQ Help")
-                .setDescription("Welcome to Datenshi!\nPlease read our [Rules](https://datenshi.xyz/doc/rules)\nThis is list all of the commands\n\n`email` - explain why you dont get verified by email\n`banned` - explain why you got banned\n`contact` - how to contact our staff\n`cert` - explain your cert problem\n`hosts` - explain your hosts problem\n`help` - to see all the commands\n`donate` - how to donate?\n`vpn` - solution for indonesian connection shit problem\n`name` - changename?\n`wipe` - wipeaccount?\n`clan` - about clans\n`report` - explain how to reports\n`map` - explain about the beatmap request\n`roles` - explain the differents roles\n`recent` - @recent (vanilla/relax) ochi\n`top` - @top (vanilla/relax) ochi\n`stats` - @stats (vanilla/relax) ochi")
+                .setDescription("Welcome to Datenshi! <a:emoji_name:emoji_id>\nPlease read our [Rules](https://datenshi.xyz/doc/rules)\nThis is list all of the commands\n\n`email` - explain why you dont get verified by email\n`banned` - explain why you got banned\n`contact` - how to contact our staff\n`cert` - explain your cert problem\n`hosts` - explain your hosts problem\n`help` - to see all the commands\n`donate` - how to donate?\n`vpn` - solution for indonesian connection shit problem\n`name` - changename?\n`wipe` - wipeaccount?\n`clan` - about clans\n`report` - explain how to reports\n`map` - explain about the beatmap request\n`roles` - explain the differents roles\n`recent` - @recent (vanilla/relax) ochi\n`top` - @top (vanilla/relax) ochi\n`stats` - @stats (vanilla/relax) ochi")
 		.setImage("https://i.datenshi.xyz/static/logos/datenshi.png")
             } else {
                 return message.channel.send("wrong command, use @faq help") 
