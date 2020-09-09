@@ -6,7 +6,7 @@ const config = require("../config.json")
 module.exports = function (client) {
     client.on('message', async message => {
         if (message.content.toLowerCase().startsWith(config.bot.prefix + "restrict")) {
-            if (!message.member.roles.cache.find(r => r.name === "Community Manager") || !message.member.roles.cache.find(r => r.name === "Chat Moderators")) { return message.channel.send("This is reserved for ilyt, sorry!") }
+	if (!message.member.roles.cache.some(role => (role.name == "Community Manager" || role.name === "Chat Moderators"))) { return message.channel.send("This is reserved for ilyt, sorry!") }
             var msg = message.content;
             msg = msg.split(config.bot.prefix + "restrict ");
             msg = msg[1];
