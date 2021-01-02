@@ -2,7 +2,7 @@ require('events').EventEmitter.prototype._maxListeners = 100;
 
 const config = require("./config.json");
 const Discord = require("discord.js");
-const client = new Discord.Client();
+const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
 const token = config.bot.token;
 
@@ -57,7 +57,6 @@ require("./administrator/ban.js")(client)
 require("./administrator/restrict.js")(client)
 //VERIFY
 require("./cmd/verifytoken.js")(client)
-require("./cmd/getroles.js")(client)
 // Check if any naughty words are in the bot.
 require("./handlers/noBadWordsCheck")(client)
 require("./cmd/addWordsToBadWordList")(client)
@@ -71,16 +70,13 @@ require("./cmd/getUserStats")(client)
 require("./cmd/getUserStatsRelax")(client)
 // Information
 require("./cmd/faq")(client)
+require("./cmd/MessageChannel")(client)
 require("./cmd/serverstats")(client)
 // Player Reporting
-require("./cmd/pr")(client)
 require("./handlers/playerReportingListener")(client)
 // Beatmap Request
-require("./cmd/bmreq")(client)
 require("./handlers/breqhandler")(client)
 // Top play submit
-require("./cmd/topplay")(client)
 require("./handlers/tophandler")(client)
 // WIpe requests
-require("./cmd/wipereq")(client)
 require("./handlers/wiperequest")(client)
