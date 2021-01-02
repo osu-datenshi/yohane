@@ -17,15 +17,15 @@ module.exports = function (client) {
                 let hex = parseInt(color.replace(/^#/, ''), 16);
                 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle("Recent Score For " + msg)
-                    .setURL("https://datenshi.xyz/u/" + recentScore[0].userid)
-                    .setColor(hex)
-                    .setDescription(recentScore[0].song_name)
-		            .setThumbnail("https://a.datenshi.xyz/" + user[0].id)
-                    .setImage("https://assets.ppy.sh/beatmaps/" + recentScore[0].beatmapset_id + "/covers/cover.jpg")
-                    .addField("PP:", recentScore[0].pp)
-                    .addField("Score:", recentScore[0].score)
-                    .addField("Accuracy:", Math.round(recentScore[0].accuracy) + "%")
+                .setTitle("Recent Score For " + msg)
+                .setURL("https://osu.troke.id/rx/u/" + recentScore[0].userid)
+                .setColor(hex)
+                .setDescription(recentScore[0].song_name)
+		        .setThumbnail("https://a.troke.id/" + user[0].id)
+                .setImage("https://assets.ppy.sh/beatmaps/" + recentScore[0].beatmapset_id + "/covers/cover.jpg")
+                .addField("PP:", recentScore[0].pp)
+                .addField("Score:", recentScore[0].score)
+                .addField("Accuracy:", Math.round(recentScore[0].accuracy) + "%")
                 message.channel.send(embed);
             } catch (ex) {
                 message.channel.send("user doesnt exist");
