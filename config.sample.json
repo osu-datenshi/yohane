@@ -1,29 +1,55 @@
 {
     "bot": {
-        "token": "",
-        "player-reports": "",
-        "staff_general": "",
-        "owner_id": "",
-	"bat": "",
-        "announcements": "",
-        "general": "",
-	"topplay": "",
-	"wiperequests": "",
-	"totalonlinech": "",
-	"totalregisterch": "",
-	"totalppch": "",
-	"totalplaych": "",
-        "game": "osu!",
-        "prefix": ""
+      "token": "",
+      "player-reports": "",
+      "staff_general": "",
+      "bat": "",
+      "owner_id": "",
+      "announcements": "",
+      "submitgameplay": "",
+      "reportchannel": "",
+      "beatmapreqch": "",
+      "wipereqch": "",
+      "general": "",
+      "topplay": "",
+      "banchokey": "",
+      "wiperequests": "",
+      "totalonlinech": "",
+      "admin": "",
+      "totalregisterch": "",
+      "totalppch": "",
+      "totalplaych": "",
+      "game": "osu!",
+      "prefix": "@"
     },
     "db": {
-        "host": "localhost",
-	"username": "root",
-	"password": "",
-	"database": ""
+      "host": "",
+      "username": "",
+      "password": "",
+      "database": ""
     },
-    "rdisserver": {
-	"host": "localhost",
-	"password": "crot"
-    "blacklisted_words": ["crot"]
-}
+    "redisserver": {
+      "host": "",
+      "password": ""
+    },
+    "blacklisted_words": [
+      "ainu",
+      "kotorikku",
+      "toh.ru",
+      "ryusei",
+      "ryu-sei",
+      "waving",
+      "enjuu",
+      "verge",
+      "toh ru",
+      "toh-ru",
+      "drop database",
+      "drop database ripple",
+      "drop database ripple;",
+      "puki",
+      "sapi",
+      "p u k i",
+      "s a p i",
+      "s    a    p      i"
+    ]
+  }
