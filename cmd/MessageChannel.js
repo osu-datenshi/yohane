@@ -104,7 +104,7 @@ module.exports = function (client) {
 			const embed = new Discord.MessageEmbed()
 			.setTitle("Ambil Roles!")
 			.setColor(hex)
-			.setDescription("**Ayo ambil roles kalian!**\n\n• ✅ - Akses ke seluruh channel\n • <:m_mania:705708743865794601> - MANIA\n• <:m_std:705708980562821151> - STD\n• <:m_taiko:705708901068439562> - TAIKO\n• <:m_ctb:705708831497519124> - CTB")
+			.setDescription("**Ayo ambil roles kalian!**\n\n• ✅ - Akses ke seluruh channel\n • <:m_mania:705708743865794601> - MANIA\n• <:m_std:705708980562821151> - STD\n• <:m_taiko:705708901068439562> - TAIKO\n• <:m_ctb:705708831497519124> - CTB\n• 🔞 - Akses mantap-mantap\n• ⚠️ - Ping-me! Notifikasi")
 			message.channel.send(embed)
 			.then(message => { 
 				message.react(config.er.tenshie)
@@ -112,6 +112,8 @@ module.exports = function (client) {
 				message.react(config.er.stde)
 				message.react(config.er.taikoe)
 				message.react(config.er.ctbe)
+				message.react("🔞")
+				message.react("⚠️")
 			});
 		}
 	})
@@ -138,6 +140,12 @@ module.exports = function (client) {
 			if (reaction.emoji.id === config.er.ctbe) {
 				await reaction.message.guild.members.cache.get(user.id).roles.add(config.er.ctbr)
 			}
+			if (reaction.emoji.name === "🔞") {
+				await reaction.message.guild.members.cache.get(user.id).roles.add("713455119676473445")
+			}
+			if (reaction.emoji.name === "⚠️") {
+				await reaction.message.guild.members.cache.get(user.id).roles.add("763293295949905950")
+			}
 		} else {
 			return;
 		}
@@ -148,9 +156,6 @@ module.exports = function (client) {
 		if (user.bot) return;
 		if (!reaction.message.guild) return;
 		if (reaction.message.channel.id === welcomeCh) {
-			if (reaction.emoji.name === config.er.tenshie) {
-				await reaction.message.guild.members.cache.get(user.id).roles.remove(config.er.tenshir)
-			}
 			if (reaction.emoji.id === config.er.maniae) {
 				await reaction.message.guild.members.cache.get(user.id).roles.remove(config.er.maniar)
 			}
@@ -162,6 +167,12 @@ module.exports = function (client) {
 			}
 			if (reaction.emoji.id === config.er.ctbe) {
 				await reaction.message.guild.members.cache.get(user.id).roles.remove(config.er.ctbr)
+			}
+			if (reaction.emoji.name === "🔞") {
+				await reaction.message.guild.members.cache.get(user.id).roles.remove("713455119676473445")
+			}
+			if (reaction.emoji.name === "⚠️") {
+				await reaction.message.guild.members.cache.get(user.id).roles.remove("763293295949905950")
 			}
 		} else {
 			return;
