@@ -24,9 +24,13 @@ module.exports = function (client) {
             } else if (msg.toLowerCase() == "contact") {
                 embed.setTitle("Contacting Datenshi's Staff")
                 embed.setDescription("Jika ingin menghubungi staff, silahkan mention <@&794852916305330196> dan <@&794180047882813440> ! Tolong jangan mention <@&794156391342145586>, untuk bug/report silahkan ke [github](https://github.com/osu-datenshi) kami")
-            } else if (msg.toLowerCase() == "cert") {
-                embed.setTitle("'Connection failed. Retrying in 30s' while connecting to Datenshi")
-                embed.setDescription("Mendapati masalah pada certificate error? silahkan [baca ini](https://osu.troke.id/index.php?p=16&id=12)")
+            } else if (msg.toLowerCase() == "koneksi") {
+                embed.setTitle("Cara Connect Datenshi")
+                embed.setDescription("Berikut ini adalah beberapa cara connect Datenshi bagi orang yang belum tau. Dan terdapat berbagai pemecahan masalah umum jika terkendala pada koneksi")
+                .addField("Connect Melalui Windows", "1. Pergilah ke [website](https://osu.troke.id/register] untuk mendaftar dan ikuti petunjuk yang ada disana\n2. Kemudian jika sudah sampai proses verifikasi, selanjutnya kalian harus mengunduh [switcher](https://osu.troke.id/switcher)\n3. Buka `switcher.zip` dan extract ke desktop lalu buka `run as administrator`\n4. Setelah dibuka switchernya kalian harus memilih servernya lalu pilih `Datenshi` dan klik `Connect` tunggu hingga beberapa detik hingga ada tulisan `You are connected to Datenshi`\n5.Enjoy have fun!")
+                .addField("Connect Melalui Linux/Mac", "*Disini kami memastikan osu kalian sudah ready di Linux, jadi untuk masalah installasi kalian bisa googling sendiri\n1. Silahkan edit file `/etc/hosts` kalian lalu copy paste hosts ini\n```103.152.118.200 c.ppy.sh ce.ppy.sh c3.ppy.sh c4.ppy.sh c5.ppy.sh c6.ppy.sh a.ppy.sh i.ppy.sh osu.ppy.sh```\n2. Ctrl+X + Y + Enter\n3. Download certificate `wget https://cdn.troke.id/dt.cer`\n4. Buka settingan Internet Explorer dengan menggunakan `wine control`\n5. Double klik pada Internet Settings > Content > Ceritifcates\n6. Pilih **Import** lalu Next > klik Browse cari certificate yang sudah di download lalu Next\n7. Pilih Place all certificates in the following store dan klik Browse\n8. Klik **Trusted Root Certification Authorities** lalu OK > Next > Finish)
+                .addField("")
+
             } else if (msg.toLowerCase() == "hosts") {
                 embed.setTitle("Hosts File Error")
                 embed.setDescription("Mendapati masalah pada file hosts ? silahkan [baca ini](https://osu.troke.id/index.php?p=16&id=12)")
@@ -35,7 +39,7 @@ module.exports = function (client) {
 	            embed.setDescription("<@&794909882724646912>\nRole ini diberikan kepada player yang sudah membuat liveplay bermain osu! dan terbukti tidak menggunakan program illegal, untuk info lebih lanjut silahkan [baca ini](https://osu.troke.id/doc/liveplay)")
 	        } else if (msg.toLowerCase() == "map") {
 	            embed.setTitle("Beatmaps")
-	            embed.setDescription("Tolong dibaca! jika kalian ingin map kalian di ranked, kalian harus baca [Ranking Criteria](https://datenshi.xyz/index.php?p=16&id=2) terlebih dahulu, Kami tidak mau ngerank map ngawur/aneh disini")
+	            embed.setDescription("Tolong dibaca! jika kalian ingin map kalian di ranked, kalian harus baca [Ranking Criteria](https://osu.troke.id/index.php?p=16&id=2) terlebih dahulu, Kami tidak mau ngerank map ngawur/aneh disini")
 		        .addField("**Cara Submit Map?**", "[Submit disini](https://osu.troke.id/beatmaps/rank_request)\nJika kalian adalah <@&794911839951388672>, Kalian bisa langsung submit dichannel ini <#727423092397441094>")
 	        } else if (msg.toLowerCase() == "vpn") {
 		        embed.setTitle("VPN Tutorial")
