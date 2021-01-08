@@ -27,7 +27,7 @@ module.exports = function (client) {
 			.setTitle("Roles Request Channel")
 			.setColor(hex)
             .addField("Information", "This is channels is closed, we are moving the new system for getting new roles!!")
-            .addField("How to Get?", "You can get the roles from [This Page](https://datenshi.xyz/discordtokens), you must login or create the account in the website before generate new token!")
+            .addField("How to Get?", "You can get the roles from [This Page](https://osu.troke.id/discordtokens), you must login or create the account in the website before generate new token!")
             .addField("Can i Ask?", "No, Just follow easy steps on the website! Enjoy")
 			message.channel.send(embed)
 		}
