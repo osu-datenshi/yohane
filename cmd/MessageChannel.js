@@ -27,7 +27,7 @@ module.exports = function (client) {
 			.setTitle("Roles Request Channel")
 			.setColor(hex)
             .addField("Information", "This is channels is closed, we are moving the new system for getting new roles!!")
-            .addField("How to Get?", "You can get the roles from [This Page](https://datenshi.xyz/discordtokens), you must login or create the account in the website before generate new token!")
+            .addField("How to Get?", "You can get the roles from [This Page](https://osu.troke.id/discordtokens), you must login or create the account in the website before generate new token!")
             .addField("Can i Ask?", "No, Just follow easy steps on the website! Enjoy")
 			message.channel.send(embed)
 		}
@@ -41,9 +41,9 @@ module.exports = function (client) {
             const embed = new Discord.MessageEmbed()
             .setTitle("Welcome To the Player Reporting Channel")
 	        .setColor(hex)
-            .addField("Information", "Please stick to the format below when reporting and **do not** tag admins here.\nKeep in mind to let the channel clean without any chats beside reporting, and move your ass to #general-en / #general-id to communicate or discuss")
-	        .addField("Rules", "- Obviously you should do have Datenshi account.\n- You need to use your valid Datenshi and Discord account before do any kind of reports in this channel.\n- Freely to report any users here, but you need to be as `Little Tenshi` before you do reporting others, also your statement should be VALID and don't be a douchebag here.\n- `Verified Tenshi` and `Streamer` ARE NOT vulnerable and able to get ban after the facts are collected and valid.")
-            .addField("Format", "```\nPlayer's username:\nLink to Player's Profile:\nReason for Reporting Player (cheating, multi-accounting):\nEvidence:```")
+            .addField("Information", "Tolong ikuti format ketika melaporkan dan **jangan** tag admin disini.\nBiarkan channel ini tetap bersih dari chat sampah selain report, silahkan chat disini <#698577379500621947> untuk diskusi yang lain dan <#698597147553169429> untuk masalah teknis\n**INGAT DIBACA!!**")
+	        .addField("Rules", "- Harus memiliki akun Datenshi.\n- Kamu harus menggunakan akun Datenshi dan Discord yang sesuai sebelum melaporkan sesuatu.\n- Silahkan lapor user YANG MENURUT KALIAN MENCURIGAKAN disini.\n- Lapor dengan jelas dan padat (Reasonable)")
+            .addField("Format", "```\nPlayer username:\nLink Profile:\nAlasan (cheating, multi-accounting):\nBukti:```")
             message.channel.send(embed)
         }
 	})
