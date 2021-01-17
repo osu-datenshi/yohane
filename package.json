@@ -17,13 +17,14 @@
   },
   "homepage": "https://github.com/osu-datenshi/yohane#readme",
   "dependencies": {
-    "discord.js": "^12.3.1",
-    "mysql": "^2.18.1",
-    "randomcolor": "^0.6.2",
-    "redis": "^3.0.2",
-    "sqlstring": "^2.3.2",
     "canvas": "^2.6.1",
     "canvas-senpai": "^0.1.6",
-    "node-rest-client": "^3.1.0"
+    "discord.js": "^12.3.1",
+    "fs": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "node-rest-client": "^3.1.0",
+    "randomcolor": "^0.6.2",
+    "redis": "^3.0.2",
+    "sqlstring": "^2.3.2"
   }
 }
