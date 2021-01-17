@@ -12,7 +12,7 @@ module.exports = (client, message) => {
         let hex = parseInt(color.replace(/^#/, ''), 16);
 
         const embed = new Discord.MessageEmbed()
-        .setTitle("New upload by " + message.member.nickname)
+        .setTitle("New upload by " + message.member.displayName)
         .setColor(hex)
         .setDescription(message.content)
         client.channels.cache.get(client.config.bot.topplay).send(embed)

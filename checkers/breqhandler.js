@@ -12,10 +12,10 @@ module.exports = (client, message) => {
         let hex = parseInt(color.replace(/^#/, ''), 16)
 
         const embed = new Discord.MessageEmbed()
-        .setTitle("New Request by " + message.member.nickname)
-		.setColor(hex)
-		.setDescription(message.content)
-		client.channels.cache.get(client.config.bot.bat).send(embed)
-		message.delete();
+        .setTitle("New Request by " + message.member.displayName)
+	.setColor(hex)
+	.setDescription(message.content)
+	client.channels.cache.get(client.config.bot.bat).send(embed)
+	message.delete();
     }
 }
