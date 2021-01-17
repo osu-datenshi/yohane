@@ -1,0 +1,70 @@
+{
+    "bot": {
+      "token": "",
+      "player-reports": "",
+      "staff_general": "",
+      "bat": "",
+      "owner_id": "",
+      "announcements": "",
+      "submitgameplay": "",
+      "reportchannel": "",
+      "beatmapreqch": "",
+      "wipereqch": "",
+      "welcome": "",
+      "general": "",
+      "topplay": "",
+      "banchokey": "",
+      "wiperequests": "",
+      "totalonlinech": "",
+      "admin": "",
+      "totalregisterch": "",
+      "totalppch": "",
+      "totalplaych": "",
+      "domain":"https://osu.troke.id",
+      "invitecode": "",
+      "game": "osu!",
+      "prefix": "@"
+    },
+    "er": {
+        "maniae": "",
+        "stde": "",
+        "taikoe": "",
+        "ctbe": "",
+        "maniar": "",
+        "stdr": "",
+        "taikor": "",
+        "ctbr": "",
+        "tenshie": "✅",
+        "tenshir": ""
+      },
+    "db": {
+      "host": "",
+      "username": "",
+      "password": "",
+      "database": ""
+    },
+    "redisserver": {
+      "host": "",
+      "password": ""
+    },
+    "blacklisted_words": [
+      "ainu",
+      "kotorikku",
+      "toh.ru",
+      "ryusei",
+      "ryu-sei",
+      "waving",
+      "enjuu",
+      "verge",
+      "toh ru",
+      "toh-ru",
+      "drop database",
+      "drop database ripple",
+      "drop database ripple;",
+      "puki",
+      "sapi",
+      "p u k i",
+      "s a p i",
+      "s    a    p      i"
+    ]
+  }
