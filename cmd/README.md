@@ -4,9 +4,11 @@ Ini adalah direktori berisikan command yohane.
 ## FAQ
 
 Q: Kenapa ada `/**` nya?
+<br>
 A: Itu dipake pas saya rewrite code nya lewat Visual Studio Code. Biar intellisense(bisa dibilang auto-correct)nya muncul.
 
 Q: Nanti kalo mau bikin command baru, gimana caranya?
+<br>
 A: Bikin file baru, namanya terserah. Terus, pake template command ini
 ```javascript
 module.exports = {
