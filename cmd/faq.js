@@ -1,7 +1,7 @@
 const subcommands = {
     help: (embed) => embed
     .setTitle("FAQ Help")
-    .setDescription("Berikut ini adalah command yang tersedia pada bot discord\n**Umum**\n`email` - `banned` - `contact` - `koneksi` - `help` - `donate` - `vpn` - `name` - `wipe` - `clan` - `report` - `map` - `roles`\n**Stats**\n`recent` - @recent (vanilla/relax) ochi\n`top` - @top (vanilla/relax) ochi\n`stats` - @stats (vanilla/relax) ochi")
+    .setDescription("Berikut ini adalah command yang tersedia pada bot discord\n**Umum**\n`email` - `banned` - `contact` - `pp` - `koneksi` - `help` - `donate` - `vpn` - `name` - `wipe` - `clan` - `report` - `map` - `role`\n**Stats**\n`recent` - @recent (vanilla/relax) ochi\n`top` - @top (vanilla/relax) ochi\n`stats` - @stats (vanilla/relax) ochi")
     .setImage("https://cdn.troke.id/static/logos/datenshi.png"),
 
     email: (embed) => embed
@@ -44,6 +44,13 @@ const subcommands = {
     wipe: (embed) => embed
     .setTitle("Wipe Account")
     .addField("Bisa wipe account?", "User biasa tidak bisa wipe account, wipe account hanya diperbolehkan untuk user <@&794911839951388672>!."),
+
+    pp: (embed) => embed
+    .setTitle("PP Limit")
+    .addField("Apa ini?", "PP Limit adalah sistem pembatasan total limit pp yang didapatkan oleh player")
+    .addField("Kenapa begitu?", "Fungsinya buat cegah pp-abuse sama cheater, jadi kalau kamu kena limit nanti dapet 0pp")
+    .addField("Limitnya emang berapa?", "5000pp (STD), 8888pp (Taiko), 8888pp (CTB), 9999pp (mania)")
+    .addField("Cara biar ga kena limit?", "Seperti yang ada dipesan in-game, kalian harus hubungi staff agar bisa di whitelist atau silahkan ke channel <#698597147553169429>")
     
     clan: (embed) => embed
     .setTitle("Clan")

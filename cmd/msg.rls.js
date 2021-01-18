@@ -17,16 +17,14 @@ module.exports = {
 		const embed = new Discord.MessageEmbed()
 		.setTitle("Ambil Roles!")
 		.setColor(hex)
-		.setDescription("**Ayo ambil roles kalian!**\n\n• ✅ - Akses ke seluruh channel\n • <:m_mania:705708743865794601> - MANIA\n• <:m_std:705708980562821151> - STD\n• <:m_taiko:705708901068439562> - TAIKO\n• <:m_ctb:705708831497519124> - CTB\n• 🔞 - Akses mantap-mantap\n• ⚠️ - Ping-me! Notifikasi")
+		.setDescription("**Mau ambil roles?**\nJika kalian ingin meng-akses seluruh channel, kalian harus memiliki roles <@&794156543204392961>. Untuk mendapatkannya silahkan [baca ini](https://osu.troke.id/discordtokens) pastikan kalian harus memiliki akun Datenshi!\n\n • <:modemania:800724455126335538> - MANIA\n• <:modeosu:800724455579713536> - STD\n• <:modetaiko:800724456070447196> - TAIKO\n• <:modefruits:800724454980190228> - CTB\n• 🔞 - Akses mantap-mantap")
 		message.channel.send(embed)
 		.then(message => { 
-			message.react(client.config.er.tenshie)
-			message.react(client.config.er.maniae)
-			message.react(client.config.er.stde)
-			message.react(client.config.er.taikoe)
-			message.react(client.config.er.ctbe)
+			message.react(client.config.role.mania_emoji)
+			message.react(client.config.role.std_emoji)
+			message.react(client.config.role.taiko_emoji)
+			message.react(client.config.role.ctb_emoji)
 			message.react("🔞")
-			message.react("⚠️")
 		});
     }
 }

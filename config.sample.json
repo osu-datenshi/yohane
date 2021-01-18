@@ -13,6 +13,7 @@
       "welcome": "",
       "general": "",
       "topplay": "",
+      "datenshi": "",
       "banchokey": "",
       "wiperequests": "",
       "totalonlinech": "",
@@ -25,17 +26,18 @@
       "game": "osu!",
       "prefix": "@"
     },
-    "er": {
-        "maniae": "",
-        "stde": "",
-        "taikoe": "",
-        "ctbe": "",
-        "maniar": "",
-        "stdr": "",
-        "taikor": "",
-        "ctbr": "",
-        "tenshie": "✅",
-        "tenshir": ""
+    "role": {
+        "getrole": "",
+        "mania_emoji": "",
+        "std_emoji": "",
+        "taiko_emoji": "",
+        "ctb_emoji": "",
+        "mania_role": "",
+        "std_role": "",
+        "taiko_role": "",
+        "ctb_role": "",
+        "tenshi_role": "",
+        "mantap_role": ""
       },
     "db": {
       "host": "",
