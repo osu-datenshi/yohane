@@ -50,7 +50,7 @@ const subcommands = {
     .addField("Apa ini?", "PP Limit adalah sistem pembatasan total limit pp yang didapatkan oleh player")
     .addField("Kenapa begitu?", "Fungsinya buat cegah pp-abuse sama cheater, jadi kalau kamu kena limit nanti dapet 0pp")
     .addField("Limitnya emang berapa?", "5000pp (STD), 8888pp (Taiko), 8888pp (CTB), 9999pp (mania)")
-    .addField("Cara biar ga kena limit?", "Seperti yang ada dipesan in-game, kalian harus hubungi staff agar bisa di whitelist atau silahkan ke channel <#698597147553169429>")
+    .addField("Cara biar ga kena limit?", "Seperti yang ada dipesan in-game, kalian harus hubungi staff agar bisa di whitelist atau silahkan ke channel <#698597147553169429>"),
     
     clan: (embed) => embed
     .setTitle("Clan")
