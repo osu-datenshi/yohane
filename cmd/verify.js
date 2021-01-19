@@ -19,8 +19,10 @@ module.exports = {
             var getname = await query("SELECT * FROM users WHERE id = ?", user[0].userid);
 	    let tenshiRole = client.config.role.tensi_role;
 	    let DatenshiDC = client.config.bot.datenshi;
+	    let DatenshiGuild = client.guilds.cache.get(DatenshiDC)
             message.channel.send("Hi, " + getname[0].username + "! Terima kasih sudah melakukan verifikasi! Sekarang kamu bisa meng-akses seluruh channel! Enjoy Have fun! Jangan lupa baca peraturan!");
-	    client.guilds.cache.get(DatenshiDC).members.cache.get(message.author.id).roles.add(tenshiRole);
+	    if(!DatenshiGuild.members.cache.has(message.author.id)) await DatenshiGuild.members.fetch(message.author.id)
+	    DatenshiGuild.member(message.author).roles.add(tenshiRole)
         } catch (error) {
             console.error(error);
         }
