@@ -88,7 +88,7 @@ module.exports = {
     run: (client, message, args) => {
         if(!args.length || !args[0]) return message.channel.send("This is not a valid option.");
         const subcmd = args.shift()
-        const sub = subcommands[subcmd]
+        const sub = subcommands[subcmd.toLowerCase()]
         if(!sub) return message.channel.send("wrong command, use @faq help") 
 
         let color = randomcolor_1.randomColor();
