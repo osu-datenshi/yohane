@@ -24,8 +24,10 @@ const subcommands = {
     .addField("__**• Troubleshooting •**__", "Jika kalian mengalami masalah pada switcher dikondisi tertentu, silahkan menggunakan [cara manual](https://osu.troke.id/doc/install_certificate_and_hosts_manually), cara ini adalah tanpa switcher"),
     
     role: (embed) => embed
-    .setTitle("Verified Tenshi")
-    .setDescription("<@&794909882724646912>\nRole ini diberikan kepada player yang sudah membuat liveplay bermain osu! dan terbukti tidak menggunakan program illegal, untuk info lebih lanjut silahkan [baca ini](https://osu.troke.id/doc/liveplay)"),
+    .setTitle("Roles")
+    .addField("<@&794909882724646912>", "Role ini diberikan kepada player yang sudah membuat liveplay bermain osu! dan terbukti tidak menggunakan program illegal, untuk info lebih lanjut silahkan [baca ini](https://osu.troke.id/doc/liveplay)")
+    .addField("<@&794156543204392961>", "Role ini harus didapatkan melalui [bot verification](https://osu.troke.id/discordtokens) dan kalian bisa mengakses seluruh channel ini")
+    .addField("<@&794911839951388672>", "Role ini diberikan jika kalian sudah melakukan donasi, bagi yang berminat silahkan ke halaman [Trakteer](https://trakteer.id/osudatenshi) kami."),
 
     map: (embed) => embed
     .setTitle("Beatmaps")
@@ -39,7 +41,8 @@ const subcommands = {
 
     name: (embed) => embed
     .setTitle("Ganti nama")
-    .addField("Bisa ganti nama?", "Bisa, untuk user biasa boleh ganti nama 1x saja, sedangkan <@&794911839951388672> unlimited change name, mention staff untuk changename"),
+    .addField("Bisa ganti nama?", "Bisa, untuk user biasa boleh ganti nama 1x saja, sedangkan <@&794911839951388672> bisa ganti sepuasnya [di profile settings](https://osu.troke.id/settings/changename), mention staff untuk changename")
+    .addField("Ganti nama clan bisa?", "Ganti nama clan hanya bisa dilakukan oleh leader clan melalui [clan settings](https://osu.troke.id/settings/changeclanname) dan leader clan harus memiliki status <@&794911839951388672>!"),
     
     wipe: (embed) => embed
     .setTitle("Wipe Account")
@@ -48,9 +51,10 @@ const subcommands = {
     pp: (embed) => embed
     .setTitle("PP Limit")
     .addField("Apa ini?", "PP Limit adalah sistem pembatasan total limit pp yang didapatkan oleh player")
+    .addField("Mode apa saja yang dilimit?", "Vanilla dan Relax")
     .addField("Kenapa begitu?", "Fungsinya buat cegah pp-abuse sama cheater, jadi kalau kamu kena limit nanti dapet 0pp")
     .addField("Limitnya emang berapa?", "5000pp (STD), 8888pp (Taiko), 8888pp (CTB), 9999pp (mania)")
-    .addField("Cara biar ga kena limit?", "Seperti yang ada dipesan in-game, kalian harus hubungi staff agar bisa di whitelist atau silahkan ke channel <#698597147553169429>"),
+    .addField("Cara biar ga kena limit?", "Seperti yang ada dipesan in-game, silahkan mention staff untuk bisa diwhitelist atau silahkan ke channel <#698597147553169429>"),
     
     clan: (embed) => embed
     .setTitle("Clan")
@@ -64,7 +68,7 @@ const subcommands = {
     
     donate: (embed) => embed
     .setTitle("Donate")
-	.addField("Cara donasi?", "Kalian bisa berdonasi melalui `Trakteer` atau `PayPal`")
+    .addField("Cara donasi?", "Kalian bisa berdonasi melalui `Trakteer` atau `PayPal`")
     .addField("Harga?", "20.000 IDR/bulan")
     .addField("Links", "[`PayPal`](https://paypal.me/ochidarma?locale.x=id_ID)\n[`Trakteer.id`](https://trakteer.id/osudatenshi)")
     .addField("Fiturnya apa aja?", "- Changename unlimited\n- Create Clan\n- Changename Clan (Leader)\n- Background Clan\n- Profile Background (Web)\n- RGB Name (Web)\n- Donat Badges\n- Yellow Username (In-game)\n- Get Access VIP Channel\n- Discord Roles\n- Full Support")
