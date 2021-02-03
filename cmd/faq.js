@@ -25,9 +25,7 @@ const subcommands = {
     
     role: (embed) => embed
     .setTitle("Roles")
-    .addField("<@&794909882724646912>", "Role ini diberikan kepada player yang sudah membuat liveplay bermain osu! dan terbukti tidak menggunakan program illegal, untuk info lebih lanjut silahkan [baca ini](https://osu.troke.id/doc/liveplay)")
-    .addField("<@&794156543204392961>", "Role ini harus didapatkan melalui [bot verification](https://osu.troke.id/discordtokens) dan kalian bisa mengakses seluruh channel ini")
-    .addField("<@&794911839951388672>", "Role ini diberikan jika kalian sudah melakukan donasi, bagi yang berminat silahkan ke halaman [Trakteer](https://trakteer.id/osudatenshi) kami."),
+    .setDescription("<@&794909882724646912>\n\nRole ini diberikan kepada player yang sudah membuat liveplay bermain osu! dan terbukti tidak menggunakan program illegal, untuk info lebih lanjut silahkan [baca ini](https://osu.troke.id/doc/liveplay)\n\n\n<@&794156543204392961>\n\nRole ini harus didapatkan melalui [bot verification](https://osu.troke.id/discordtokens) dan kalian bisa mengakses seluruh channel ini\n\n\n<@&794911839951388672>\n\nRole ini diberikan jika kalian sudah melakukan donasi, bagi yang berminat silahkan ke halaman [Trakteer](https://trakteer.id/osudatenshi) kami."),
 
     map: (embed) => embed
     .setTitle("Beatmaps")
