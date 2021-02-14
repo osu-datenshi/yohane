@@ -17,14 +17,15 @@ module.exports = {
         try {
             var user = await query("SELECT * FROM discord_tokens WHERE token = ?", msg);
             var getname = await query("SELECT * FROM users WHERE id = ?", user[0].userid);
-	    let tenshiRole = client.config.role.tensi_role;
+	    let tenshiRole = "794156543204392961";
 	    let DatenshiDC = client.config.bot.datenshi;
-	    let DatenshiGuild = client.guilds.cache.get(DatenshiDC)
+	    let DatenshiGuild = client.guilds.cache.get(DatenshiDC);
             message.channel.send("Hi, " + getname[0].username + "! Terima kasih sudah melakukan verifikasi! Sekarang kamu bisa meng-akses seluruh channel! Enjoy Have fun! Jangan lupa baca peraturan!");
-	    if(!DatenshiGuild.members.cache.has(message.author.id)) await DatenshiGuild.members.fetch(message.author.id)
-	    DatenshiGuild.member(message.author).roles.add(tenshiRole)
+	    if(!DatenshiGuild.members.cache.has(message.author.id)) await DatenshiGuild.members.fetch(message.author.id) 
+		DatenshiGuild.member(message.author).roles.add(tenshiRole)
         } catch (error) {
             console.error(error);
+	    message.channel.send("Token lu mana bro?");
         }
     }
 }
