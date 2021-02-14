@@ -14,7 +14,8 @@ const subcommands = {
 
         try {
             var user = await query("SELECT * FROM users WHERE username = ?", msg);
-            var recentScore = await query("SELECT * FROM scores INNER JOIN beatmaps ON scores.beatmap_md5 = beatmaps.beatmap_md5 WHERE userid = ? ORDER BY pp DESC;", user[0].id)
+            // Special mode = 0 (vanilla) 1 (relax) 2 (scorev2)
+            var recentScore = await query("SELECT * FROM scores_master INNER JOIN beatmaps ON scores_master.beatmap_md5 = beatmaps.beatmap_md5 WHERE userid = ? AND special_mode = 0 ORDER BY pp DESC;", user[0].id)
             let color = randomcolor_1.randomColor();
             let hex = parseInt(color.replace(/^#/, ''), 16);
             
@@ -44,7 +45,8 @@ const subcommands = {
 
         try {
             var user = await query("SELECT * FROM users WHERE username = ?", msg);
-            var recentScore = await query("SELECT * FROM scores_relax INNER JOIN beatmaps ON scores_relax.beatmap_md5 = beatmaps.beatmap_md5 WHERE userid = ? ORDER BY pp DESC;", user[0].id)
+            // Special mode = 0 (vanilla) 1 (relax) 2 (scorev2)
+            var recentScore = await query("SELECT * FROM scores_master INNER JOIN beatmaps ON scores_master.beatmap_md5 = beatmaps.beatmap_md5 WHERE userid = ? AND special_mode = 1 ORDER BY pp DESC;", user[0].id)
             let color = randomcolor_1.randomColor();
             let hex = parseInt(color.replace(/^#/, ''), 16);
             
