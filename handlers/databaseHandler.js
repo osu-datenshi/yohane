@@ -1,5 +1,4 @@
 const mysql = require("mysql");
-const sqlstring = require("sqlstring");
 const config = require("../config.json");
 
 const pool = mysql.createConnection({
