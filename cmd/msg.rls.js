@@ -17,7 +17,7 @@ module.exports = {
 		const embed = new Discord.MessageEmbed()
 		.setTitle("Ambil Roles!")
 		.setColor(hex)
-		.setDescription("**Mau ambil roles?**\nJika kalian ingin meng-akses seluruh channel, kalian harus memiliki roles <@&794156543204392961>. Untuk mendapatkannya silahkan [baca ini](https://osu.troke.id/discordtokens) pastikan kalian harus memiliki akun Datenshi!\n\n • <:modemania:800724455126335538> - MANIA\n• <:modeosu:800724455579713536> - STD\n• <:modetaiko:800724456070447196> - TAIKO\n• <:modefruits:800724454980190228> - CTB\n• 🔞 - Akses mantap-mantap")
+		.setDescription("**Mau ambil roles?**\nJika kalian ingin meng-akses seluruh channel, kalian harus memiliki roles <@&794156543204392961>. Untuk mendapatkannya silahkan [baca ini](https://osu.troke.id/discordtokens) pastikan kalian harus memiliki akun Datenshi!\n\n• <:modemania:800724455126335538> - MANIA\n• <:modeosu:800724455579713536> - STD\n• <:modetaiko:800724456070447196> - TAIKO\n• <:modefruits:800724454980190228> - CTB\n• 🔞 - Akses mantap-mantap")
 		message.channel.send(embed)
 		.then(message => { 
 			message.react(client.config.role.mania_emoji)

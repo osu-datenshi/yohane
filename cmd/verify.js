@@ -1,6 +1,15 @@
-const Discord = require('discord.js');
-const randomcolor_1 = require("randomcolor");
-const { query } = require("../handlers/databaseHandler");
+const { query, pool } = require("../handlers/databaseHandler");
+
+async function getTokenDaten(Token) {
+    return new Promise((resolve, reject) => {
+        pool.query(
+            "SELECT discord_tokens.userid, discord_tokens.token, users.username, discord_tokens.discord_id, discord_tokens.role_id FROM discord_tokens INNER JOIN users ON discord_tokens.userid=users.id WHERE discord_tokens.token = ?",
+            [Token],
+            (err, result) => {
+            return err ? reject(err) : resolve(result);
+        });
+    });
+}
 
 module.exports = {
     name: "verify",
@@ -12,20 +21,21 @@ module.exports = {
      */
     run: async (client, message, args) => {
         if(message.channel.type != "dm") return;
-        if(!args.length || !args[0]) return message.channel.send("Token ga ketemu");
+        if(!args.length || !args[0]) return message.channel.send("Masukin token!");
         var msg = args.join(" ")
         try {
-            var user = await query("SELECT * FROM discord_tokens WHERE token = ?", msg);
-            var getname = await query("SELECT * FROM users WHERE id = ?", user[0].userid);
-	    let tenshiRole = "794156543204392961";
-	    let DatenshiDC = client.config.bot.datenshi;
-	    let DatenshiGuild = client.guilds.cache.get(DatenshiDC);
-            message.channel.send("Hi, " + getname[0].username + "! Terima kasih sudah melakukan verifikasi! Sekarang kamu bisa meng-akses seluruh channel! Enjoy Have fun! Jangan lupa baca peraturan!");
-	    if(!DatenshiGuild.members.cache.has(message.author.id)) await DatenshiGuild.members.fetch(message.author.id) 
-		DatenshiGuild.member(message.author).roles.add(tenshiRole)
+            var getDCid = message.author.id;
+            var getUser = await getTokenDaten(msg);
+            message.channel.send(`Hi ${getUser[0].username}! Terima kasih sudah melakukan verifikasi!`);
+            let tenshiRole = "794156543204392961";
+            let DatenshiGuild = client.guilds.cache.get(client.config.bot.datenshi);
+            if(!DatenshiGuild.members.cache.has(getDCid)) 
+            await DatenshiGuild.members.fetch(getDCid) 
+            DatenshiGuild.member(message.author).roles.add(tenshiRole)
+            await pool.query("UPDATE discord_tokens SET userid = ?, discord_id = ?, role_id = ? WHERE token = ?", [getUser[0].userid, getDCid, tenshiRole, msg]);
         } catch (error) {
-            console.error(error);
-	    message.channel.send("Token lu mana bro?");
+            console.log(error);
+	        message.channel.send("Token lu mana bro?");
         }
     }
 }
