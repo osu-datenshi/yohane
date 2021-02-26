@@ -1,7 +1,7 @@
 const subcommands = {
     help: (embed) => embed
     .setTitle("FAQ Help")
-    .setDescription("Berikut ini adalah command yang tersedia pada bot discord\n**Umum**\n`email` - `banned` - `contact` - `pp` - `koneksi` - `help` - `donate` - `vpn` - `name` - `wipe` - `clan` - `report` - `map` - `role`\n**Stats**\n`recent` - @recent (vanilla/relax) ochi\n`top` - @top (vanilla/relax) ochi\n`stats` - @stats (vanilla/relax) ochi")
+    .setDescription("Berikut ini adalah command yang tersedia pada bot discord\n**Umum**\n`email` - `banned` - `contact` - `pp` - `koneksi` - `help` - `donate` - `vpn` - `name` - `wipe` - `clan` - `report` - `map` - `role` - `absen` - `link`\n**Stats**\n`recent` - @recent (vanilla/relax) ochi\n`top` - @top (vanilla/relax) ochi\n`stats` - @stats (vanilla/relax) ochi")
     .setImage("https://cdn.troke.id/static/logos/datenshi.png"),
 
     email: (embed) => embed
@@ -58,12 +58,17 @@ const subcommands = {
     .setTitle("Clan")
     .addField("Cara bikin clan?", "Pembuatan clan bisa dilakukan diwebsite cari Create Clan")
     .addField("Cara invite user / join ke dalam clan?", "Cara invite saat ini adalah menggunakan link invite yang tersedia dibagian clan settings paling bawah (khusus Clan Leader), untuk join tidak bisa harus melalui link invite, gunakan channel <#699191360116359229> untuk mendapatkan link invite atau memposting link invite!")
-    .addField("Ganti clan leader?", "Saat ini masih belum bisa ganti clan leader, kemungkinan akan datang dimasa depan!"),
+    .addField("Ganti clan leader?", "Saat ini masih belum bisa ganti clan leader, kemungkinan akan datang dimasa depan!")
+    .addField("Berapa max clan?", "Jumlah maximal adalah 16 termasuk leader, jika kalian adalah <@&794911839951388672> bisa request ke admin agar clan max member ditambah menjadi 25"),
     
     report: (embed) => embed
     .setTitle("Reports")
     .addField("Cara report user?", "Gunakan !report untuk in-game atau ke channel <#794917984870989836>!"),
     
+    link: (embed) => embed
+    .setTitle("Link Account")
+    .setDescription("Bagi yang belum tau caranya untuk link account kalian, cukup [klik link ini](https://osu.troke.id/discordtokens)")
+
     donate: (embed) => embed
     .setTitle("Donate")
     .addField("Cara donasi?", "Kalian bisa berdonasi melalui `Trakteer` atau `PayPal`")
@@ -71,12 +76,15 @@ const subcommands = {
     .addField("Links", "[`PayPal`](https://paypal.me/ochidarma?locale.x=id_ID)\n[`Trakteer.id`](https://trakteer.id/osudatenshi)")
     .addField("Fiturnya apa aja?", "- Changename unlimited\n- Create Clan\n- Changename Clan (Leader)\n- Background Clan\n- Profile Background (Web)\n- RGB Name (Web)\n- Donat Badges\n- Yellow Username (In-game)\n- Get Access VIP Channel\n- Discord Roles\n- Full Support")
     .addField("Konfirmasi", "**Diharapkan melakukan konfirmasi kepada staff setelah melakukan donasi!**"),
+
+    absen: (embed) => embed
+    .setTitle("Absen Jumatan")
+    .setDescription("Silahkan buka [link berikut ini](https://docs.google.com/forms/d/e/1FAIpQLScXY6Bv5H-T8KzSKccEazE3peM_wubKoWkZQugMNnvMYFm7Qw/viewform)"),
     
     //# FAQ subcommand template
     //nama: (embed) => embed
     //# code untuk memanipulasi/merubah properti embed taruh disini
 }
-subcommands.jumatan = (embed) => embed.setTitle("Absensi Jumatan").setDescription("Silahkan buka [link berikut ini](https://docs.google.com/forms/d/e/1FAIpQLScXY6Bv5H-T8KzSKccEazE3peM_wubKoWkZQugMNnvMYFm7Qw/viewform)");
 
 const Discord = require('discord.js');
 const randomcolor_1 = require("randomcolor");
