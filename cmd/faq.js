@@ -67,7 +67,7 @@ const subcommands = {
     
     link: (embed) => embed
     .setTitle("Link Account")
-    .setDescription("Bagi yang belum tau caranya untuk link account kalian, cukup [klik link ini](https://osu.troke.id/discordtokens)")
+    .setDescription("Bagi yang belum tau caranya untuk link account kalian, cukup [klik link ini](https://osu.troke.id/discordtokens)"),
 
     donate: (embed) => embed
     .setTitle("Donate")
