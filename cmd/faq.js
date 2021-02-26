@@ -72,11 +72,11 @@ const subcommands = {
     .addField("Fiturnya apa aja?", "- Changename unlimited\n- Create Clan\n- Changename Clan (Leader)\n- Background Clan\n- Profile Background (Web)\n- RGB Name (Web)\n- Donat Badges\n- Yellow Username (In-game)\n- Get Access VIP Channel\n- Discord Roles\n- Full Support")
     .addField("Konfirmasi", "**Diharapkan melakukan konfirmasi kepada staff setelah melakukan donasi!**"),
     
-    absensi: (embed) => embed.setTitle("Absensi Jumatan").setDescription("Silahkan buka [link berikut ini](https://docs.google.com/forms/d/e/1FAIpQLScXY6Bv5H-T8KzSKccEazE3peM_wubKoWkZQugMNnvMYFm7Qw/viewform)"),
     //# FAQ subcommand template
     //nama: (embed) => embed
     //# code untuk memanipulasi/merubah properti embed taruh disini
 }
+subcommands.jumatan = (embed) => embed.setTitle("Absensi Jumatan").setDescription("Silahkan buka [link berikut ini](https://docs.google.com/forms/d/e/1FAIpQLScXY6Bv5H-T8KzSKccEazE3peM_wubKoWkZQugMNnvMYFm7Qw/viewform)");
 
 const Discord = require('discord.js');
 const randomcolor_1 = require("randomcolor");
