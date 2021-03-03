@@ -31,7 +31,6 @@ const subcommands = {
      * @param {string[]} args 
      */
     vanilla: async (client, message, args) => {
-        const msg = args.join(" ")
         try {
             var AmbilID = message.author.id;
             var user = await getUserDaten(AmbilID);
