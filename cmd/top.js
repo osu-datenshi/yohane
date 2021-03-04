@@ -78,7 +78,7 @@ const subcommands = {
             .addField("Download Beatmap:", "[osu!](https://osu.ppy.sh/d/" + recentScore[0].beatmapset_id +") • [beatconnect](https://beatconnect.io/b/" + recentScore[0].beatmapset_id +") • [datenshi](https://osu.troke.id/d/" + recentScore[0].beatmapset_id +")")
             message.channel.send(embed);
         } catch (ex) {
-            message.channel.send("User doesn't exist");
+            message.channel.send("Maaf user tidak dapat ditemukan, silahkan link account jika belum ada!");
         }
     },
 
@@ -135,7 +135,7 @@ const subcommands = {
             .addField("Download Beatmap:", "[osu!](https://osu.ppy.sh/d/" + recentScore[0].beatmapset_id +") • [beatconnect](https://beatconnect.io/b/" + recentScore[0].beatmapset_id +") • [datenshi](https://osu.troke.id/d/" + recentScore[0].beatmapset_id +")")
             message.channel.send(embed);
         } catch (ex) {
-            message.channel.send("user doesnt exist");
+            message.channel.send("Maaf user tidak dapat ditemukan, silahkan link account jika belum ada!");
         }
     }
 
