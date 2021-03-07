@@ -53,6 +53,7 @@ module.exports = {
      */
     run: (client, message, args) => {
         if(!args.length || !args[0]) return message.channel.send("This is not a valid option.");
+        if(message.member.id != client.config.bot.owner_id) return message.channel.send("This is reserved for ilyt, sorry!");
         const subcmd = args.shift()
         const sub = subcommands[subcmd]
         if(!sub) return;

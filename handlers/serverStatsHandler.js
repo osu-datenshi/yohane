@@ -57,7 +57,7 @@ module.exports = async (client) => {
         }
     };
 
-    console.log('Connection established!');
+    console.log('Redis Connection established!');
     await updateDiscord();
 
     setInterval(updateDiscord, 5 * 60 * 1000);
