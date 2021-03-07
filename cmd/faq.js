@@ -48,11 +48,11 @@ const subcommands = {
 
     pp: (embed) => embed
     .setTitle("PP Limit")
-    .addField("Apa ini?", "PP Limit adalah sistem pembatasan total limit pp yang didapatkan oleh player")
+    .addField("Apa ini?", "PP Limit adalah sistem pembatasan total limit pp yang didapatkan oleh player, kalian nanti akan mendapatkan sebuah pesan dari Yohane ketika PP sudah mencapai limit. **Ingat** ini bukan pemberitahuan banned, melainkan pemberitahuan limit pp dan bukan yang lain!")
     .addField("Mode apa saja yang dilimit?", "Vanilla dan Relax")
     .addField("Kenapa begitu?", "Fungsinya buat cegah pp-abuse sama cheater, jadi kalau kamu kena limit nanti dapet 0pp")
     .addField("Limitnya emang berapa?", "5000pp (STD), 8888pp (Taiko), 8888pp (CTB), 9999pp (mania)")
-    .addField("Cara biar ga kena limit?", "Seperti yang ada dipesan in-game, silahkan mention staff untuk bisa diwhitelist atau silahkan ke channel <#698597147553169429>"),
+    .addField("Cara biar ga kena limit?", "1. Pergilah ke channel <#698597147553169429>\n2. Kemudian kirimkan sebuah screenshot yang terdapat pesan pemberitahuan dari Yohane seperti [contoh ini](https://cdn.discordapp.com/attachments/698597147553169429/816492708356423680/screenshot308.jpg)\n3. Kemudian mention salah satu staff untuk bisa di whitelist dan tunggu pemberitahuan dari staff"),
     
     clan: (embed) => embed
     .setTitle("Clan")
