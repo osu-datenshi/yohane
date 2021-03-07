@@ -12,6 +12,8 @@ module.exports = {
 		if (reaction.partial) await reaction.fetch();
 		if (user.bot) return;
 		if (!reaction.message.guild) return;
+		var GetID = reaction.message.guild.members.cache.get(user.id);
+		let membersWithRole = reaction.message.member.roles.cache.has("794156543204392961");
 		if (reaction.message.channel.id === roleCh) {
 			if (reaction.emoji.id === client.config.role.mania_emoji) {
 				await reaction.message.guild.members.cache.get(user.id).roles.add(client.config.role.mania_role)
@@ -25,8 +27,15 @@ module.exports = {
 			if (reaction.emoji.id === client.config.role.ctb_emoji) {
 				await reaction.message.guild.members.cache.get(user.id).roles.add(client.config.role.ctb_role)
 			}
+			//PERLU DIPERBAIKI NANTI
 			if (reaction.emoji.name === "🔞") {
-				await reaction.message.guild.members.cache.get(user.id).roles.add(client.config.role.mantap_role)
+				if (!membersWithRole) {
+					await GetID.roles.add(client.config.role.mantap_role)
+					console.log(membersWithRole);
+				} else {
+					GetID.send("You need to be Member!!");
+					console.log(membersWithRole);
+				}
 			}
 		} else {
 			return;

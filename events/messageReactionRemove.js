@@ -26,11 +26,7 @@ module.exports = {
 				await reaction.message.guild.members.cache.get(user.id).roles.remove(client.config.role.ctb_role)
 			}
 			if (reaction.emoji.name === "🔞") {
-				if(message.member.roles.cache.find(r => r.name === "Members")) {
-					await reaction.message.guild.members.cache.get(user.id).roles.remove(client.config.role.mantap_role)
-				} else {
-					message.author.send("Kamu harus memiliki roles Members untuk mendapatkan ini!")
-				}
+				await reaction.message.guild.members.cache.get(user.id).roles.remove(client.config.role.mantap_role)
 			}
 		} else {
 			return;
