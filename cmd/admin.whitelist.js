@@ -15,7 +15,7 @@ module.exports = {
         let mention = message.mentions.users.first();
         console.log(mention);
         if (message.channel.type == "dm") return message.author.send("You cannot use this on DM!");
-        if (!mention) return message.channel.send("Can't find user!");
+        if (!mention) return message.channel.send("Can't find user! use format `<@id>` for mention user");
         if (!message.member.roles.cache.some(role => (role.name == "Community Manager" || role.name === "Moderator"))) return message.channel.send("This is reserved for ilyt, sorry!");
 
 		const embed = new Discord.MessageEmbed()

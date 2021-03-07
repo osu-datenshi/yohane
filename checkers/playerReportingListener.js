@@ -13,7 +13,7 @@ module.exports = (client, message) => {
             
         const embed = new Discord.MessageEmbed()
         .setTitle("New Report by " + message.member.displayName)
-	.setColor(hex)
+	    .setColor(hex)
         .setDescription(message.content)
         client.channels.cache.get(client.config.bot.staff_general).send(embed)
         message.delete();
