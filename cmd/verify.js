@@ -38,7 +38,7 @@ module.exports = {
                 .setImage("https://cdn.troke.id/static/logos/datenshi.png")
 
                 message.channel.send(embed);
-                let tenshiRole = "794156543204392961";
+                let tenshiRole = "818101962859085855";
                 let DatenshiGuild = client.guilds.cache.get(client.config.bot.datenshi);
                 if(!DatenshiGuild.members.cache.has(getDCid)) 
                 await DatenshiGuild.members.fetch(getDCid) 

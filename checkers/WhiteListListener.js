@@ -12,7 +12,7 @@ module.exports = (client, message) => {
         let hex = parseInt(color.replace(/^#/, ''), 16);
             
         const embed = new Discord.MessageEmbed()
-        .setTitle("New Submit by " + message.member.displayName + message.member.id)
+        .setTitle("New Submit by " + message.member.displayName + " (ID:" + message.member.id + ")")
 	    .setColor(hex)
         .setDescription(message.content)
         client.channels.cache.get(client.config.bot.hasilsubmit_ip).send(embed)
