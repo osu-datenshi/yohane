@@ -15,16 +15,9 @@ module.exports = {
 		let hex = parseInt(color.replace(/^#/, ''), 16);
 
 		const embed = new Discord.MessageEmbed()
-		.setTitle("Ambil Roles!")
+		.setTitle("Bagaimana cara mendapatkan roles?")
 		.setColor(hex)
-		.setDescription("**Mau ambil roles?**\nJika kalian ingin meng-akses seluruh channel, kalian harus memiliki roles <@&794156543204392961>. Untuk mendapatkannya silahkan [baca ini](https://osu.troke.id/discordtokens) pastikan kalian harus memiliki akun Datenshi!\n\n• <:modemania:800724455126335538> - MANIA\n• <:modeosu:800724455579713536> - STD\n• <:modetaiko:800724456070447196> - TAIKO\n• <:modefruits:800724454980190228> - CTB\n• 🔞 - Akses mantap-mantap")
+		.setDescription("Buat yang ingin melihat ke semua channels, kalian diharuskan menghubungkan account Discord dengan account Datenshi kalian agar bisa mendapatkan role <@&818101962859085855>, untuk menghubungkannya silahkan ke [link ini](https://osu.troke.id/discordtokens)\n*Sangat disarankan menggunakan 1 account Discord dan 1 account Datenshi, selebihnya tidak bisa!*")
 		message.channel.send(embed)
-		.then(message => { 
-			message.react(client.config.role.mania_emoji)
-			message.react(client.config.role.std_emoji)
-			message.react(client.config.role.taiko_emoji)
-			message.react(client.config.role.ctb_emoji)
-			message.react("🔞")
-		});
     }
 }
