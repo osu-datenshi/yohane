@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const randomcolor_1 = require("randomcolor");
-const { query } = require("../handlers/databaseHandler");
+const { pool } = require("../handlers/databaseHandler");
 
 /**
  * @param {import("discord.js").Client} client 
@@ -46,9 +46,9 @@ module.exports = (client, message) => {
             let bQuery;
             async function q(s,t){
                 if(s)
-                    return await query('select beatmap_id, difficulty_name, ranked_status_freezed, ranked from beatmaps where beatmapset_id = ?', t);
+                    return await pool.query('select beatmap_id, difficulty_name, ranked_status_freezed, ranked from beatmaps where beatmapset_id = ?', t);
                 else
-                    return await query('select beatmap_id, difficulty_name, ranked_status_freezed, ranked from beatmaps where beatmap_id = ?', t);
+                    return await pool.query('select beatmap_id, difficulty_name, ranked_status_freezed, ranked from beatmaps where beatmap_id = ?', t);
             }
             let qqqqqq = false;
             switch(mapString[0]){
