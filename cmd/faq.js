@@ -12,6 +12,13 @@ const subcommands = {
     .setTitle("Banned/Restricted")
     .setDescription("Kamu terbanned? Restrict? silahkan [baca ini](https://osu.troke.id/doc/liveplay)"),
 
+    switcher: (embed) => embed
+    .setTitle("Switcher")
+    .setDescription("[Link Switcher](https://osu.troke.id/switcher)")
+    .addField("Kak, Switcher ku kok force close ya?", "Pastikan kamu sudah menjalankannnya menggunakan **run as administrator**")
+    .addField("Kak, Switchernya muncul error ketika mau connect", "Tolong kirimkan bukti errornya ke channel <#698597147553169429> agar bisa dibantu mengenai permasalahannya")
+    .addField("Kok masih error terus??", "Silahkan gunakan cara manual, ini adalah cara tanpa menggunakan switcher, gunakan [link ini](https://osu.troke.id/doc/install_certificate_and_hosts_manually)"),
+
     contact: (embed) => embed
     .setTitle("Contacting Datenshi's Staff")
     .setDescription("Jika ingin menghubungi staff, silahkan mention <@&794852916305330196> dan <@&794180047882813440> ! Tolong jangan mention <@&794156391342145586>, untuk bug/report silahkan ke [github](https://github.com/osu-datenshi) kami"),
@@ -25,7 +32,7 @@ const subcommands = {
     
     role: (embed) => embed
     .setTitle("Roles")
-    .setDescription("<@&794909882724646912>\nRole ini diberikan kepada player yang sudah membuat liveplay bermain osu! dan terbukti tidak menggunakan program illegal, untuk info lebih lanjut silahkan [baca ini](https://osu.troke.id/doc/liveplay).\n\n<@&794156543204392961>\nRole ini harus didapatkan melalui [bot verification](https://osu.troke.id/discordtokens) dan kalian bisa mengakses seluruh channel ini.\n\n<@&794911839951388672>\nRole ini diberikan jika kalian sudah melakukan donasi, bagi yang berminat silahkan ke halaman [Trakteer](https://trakteer.id/osudatenshi) kami."),
+    .setDescription("<@&794909882724646912>\nRole ini diberikan kepada player yang sudah membuat liveplay bermain osu! dan terbukti tidak menggunakan program illegal, untuk info lebih lanjut silahkan [baca ini](https://osu.troke.id/doc/liveplay).\n\n<@&818101962859085855>\nRole ini harus didapatkan melalui [link account](https://osu.troke.id/discordtokens) dan kalian bisa mengakses seluruh channel ini.\n\n<@&794911839951388672>\nRole ini diberikan jika kalian sudah melakukan donasi, bagi yang berminat silahkan ke halaman [Trakteer](https://trakteer.id/osudatenshi) kami."),
 
     map: (embed) => embed
     .setTitle("Beatmaps")
