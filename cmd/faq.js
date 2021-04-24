@@ -1,7 +1,7 @@
 const subcommands = {
     help: (embed) => embed
     .setTitle("FAQ Help")
-    .setDescription("Berikut ini adalah command yang tersedia pada bot discord\n**Umum**\n`email` - `banned` - `contact` - `pp` - `koneksi` - `help` - `donate` - `vpn` - `name` - `wipe` - `clan` - `report` - `map` - `role` - `absen` - `link`\n**Stats**\n`recent` - @recent (vanilla/relax) ochi\n`top` - @top (vanilla/relax) ochi\n`stats` - @stats (vanilla/relax) ochi")
+    .setDescription("Berikut ini adalah command yang tersedia pada bot discord\n**Umum**\n`email` - `banned` - `contact` - `pp` - `koneksi` - `help` - `donate` - `vpn` - `name` - `wipe` - `clan` - `report` - `map` - `role` - `absen` - `link`\n**Stats**\n`recent` - @recent (vanilla/relax)\n`top` - @top (vanilla/relax)\n`stats` - @stats (vanilla/relax)")
     .setImage("https://cdn.troke.id/static/logos/datenshi.png"),
 
     email: (embed) => embed
@@ -26,18 +26,18 @@ const subcommands = {
     koneksi: (embed) => embed
     .setTitle("Cara Connect Datenshi")
     .setDescription("Berikut ini adalah beberapa cara connect Datenshi bagi orang yang belum tau. Dan terdapat berbagai pemecahan masalah umum jika terkendala pada koneksi")
-    .addField("__**• Connect Melalui Windows •**__", "1. Pergilah ke [website](https://osu.troke.id/register) untuk mendaftar dan ikuti petunjuk yang ada disana\n2. Kemudian jika sudah sampai proses verifikasi, selanjutnya kalian harus mengunduh [switcher](https://osu.troke.id/switcher)\n3. Buka `switcher.zip` dan extract ke desktop lalu buka `run as administrator`\n4. Setelah dibuka switchernya kalian harus memilih servernya lalu pilih `Datenshi` dan klik `Connect` tunggu hingga beberapa detik hingga ada tulisan `You are connected to Datenshi`\n5.Enjoy have fun!")
-    .addField("__**• Connect Melalui Linux/Mac •**__", "*Disini kami memastikan osu kalian sudah ready di Linux, jadi untuk masalah installasi kalian bisa googling sendiri\n\n1. Silahkan edit file `/etc/hosts` kalian lalu copy paste hosts ini :\n```139.180.145.85 c.ppy.sh ce.ppy.sh c3.ppy.sh c4.ppy.sh c5.ppy.sh c6.ppy.sh a.ppy.sh i.ppy.sh osu.ppy.sh```\n2. Ctrl+X + Y + Enter\n3. Download certificate `wget https://cdn.troke.id/dt.cer`\n4. Buka settingan Internet Explorer dengan menggunakan `wine control`\n5. Double klik pada Internet Settings > Content > Ceritifcates\n6. Pilih **Import** lalu Next > klik Browse cari certificate yang sudah di download lalu Next\n7. Pilih Place all certificates in the following store dan klik Browse\n8. Klik **Trusted Root Certification Authorities** lalu OK > Next > Finish")
-    .addField("__**• Troubleshooting •**__", "Jika kalian mengalami masalah pada switcher dikondisi tertentu, silahkan menggunakan [cara manual](https://osu.troke.id/doc/install_certificate_and_hosts_manually), cara ini adalah tanpa switcher"),
+    .addField("__**• Tanpa Switcher (New) •**__", "1. Copy osu! kalian terlebih dahulu\n2. Kemudian Paste as Shortcut\n3. Kemudian klik kanan > properties pada icon osu yang tadi kalian paste\n4. Kemudian pada bagian **Target** kalian cukup tambahkan command ini ```-devserver troke.id``` pada bagian terakhir\n5. Kemudian klik OK lalu jalankan seperti biasa dan login menggunakan akun Datenshi kalian\n6. Enjoy have-fun!")
+    .addField("__**• Troubleshooting •**__", "Jika kalian mengalami masalah pada switcher dikondisi tertentu, silahkan menggunakan [cara manual](https://osu.troke.id/doc/install_certificate_and_hosts_manually), cara ini adalah tanpa switcher")
+    .setImage("https://cdn.discordapp.com/attachments/699180921969967145/828804274883788872/unknown.png"),
     
     role: (embed) => embed
     .setTitle("Roles")
-    .setDescription("<@&794909882724646912>\nRole ini diberikan kepada player yang sudah membuat liveplay bermain osu! dan terbukti tidak menggunakan program illegal, untuk info lebih lanjut silahkan [baca ini](https://osu.troke.id/doc/liveplay).\n\n<@&818101962859085855>\nRole ini harus didapatkan melalui [link account](https://osu.troke.id/discordtokens) dan kalian bisa mengakses seluruh channel ini.\n\n<@&794911839951388672>\nRole ini diberikan jika kalian sudah melakukan donasi, bagi yang berminat silahkan ke halaman [Trakteer](https://trakteer.id/osudatenshi) kami."),
+    .setDescription("<@&794909882724646912>\nRole ini diberikan kepada player yang sudah membuat liveplay bermain osu! dan terbukti tidak menggunakan program illegal, untuk info lebih lanjut silahkan [baca ini](https://osu.troke.id/doc/liveplay).\n\n<@&818101962859085855>\nRole ini harus didapatkan melalui [bot verification](https://osu.troke.id/discordtokens) dan kalian bisa mengakses seluruh channel ini. Ingat! Role ini terhubung dengan Akun Datenshi kalian, pastikan Akun Discord kalian tidak keluar-masuk server Discord Datenshi! untuk menghindari masalah yang ada!\n\n<@&794911839951388672>\nRole ini diberikan jika kalian sudah melakukan donasi, bagi yang berminat silahkan ke halaman [Trakteer](https://trakteer.id/osudatenshi) kami."),
 
     map: (embed) => embed
     .setTitle("Beatmaps")
     .setDescription("Tolong dibaca! jika kalian ingin map kalian di ranked, kalian harus baca [Ranking Criteria](https://osu.troke.id/index.php?p=16&id=2) terlebih dahulu, Kami tidak mau ngerank map ngawur/aneh disini")
-    .addField("**Beatmap sudah disubmit tapi tidak ranked?**", "Segera mention <@&794180047882813440> untuk menanyakan kenapa beatmap yang kamu submit tidak diranked")
+    .addField("**Beatmap sudah disubmit tapi tidak ranked?**", "Segera mention <@&794180047882813440> untuk menanyakan kenapa beatmap yang kamu submit tidak diranked atau pergi ke channel <#796412309802582097> untuk melihat alasan yg diberikan oleh BN")
     .addField("**Cara submit map?**", "[Submit disini](https://osu.troke.id/beatmaps/rank_request)\nJika kalian adalah <@&794911839951388672>, Kalian bisa langsung submit dichannel ini <#727423092397441094>"),
     
     vpn: (embed) => embed
