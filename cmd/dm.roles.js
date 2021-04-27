@@ -114,7 +114,8 @@ module.exports = {
     run: async (client, message, args) => {
         if (message.channel.id !== client.config.role.getrolesCH) return message.channel.send("Sorry, you are not in channels").then(msg => msg.delete({timeout: 3000}));
         if(!args.length || !args[0]) return message.channel.send("This is not a valid option.");
-        if (message.author.id){ message.delete({timeout: 5000}) }
+        // sudah hilang kawan
+        // if (message.author.id){ message.delete({timeout: 5000}) }
         const subcmd = args.shift()
         const sub = subcommands[subcmd]
         if(!sub) return;
