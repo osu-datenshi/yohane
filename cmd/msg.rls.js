@@ -15,16 +15,11 @@ module.exports = {
 		let hex = parseInt(color.replace(/^#/, ''), 16);
 
 		const embed = new Discord.MessageEmbed()
-		.setTitle("Ambil Roles!")
+		.setTitle("Roles")
 		.setColor(hex)
-		.setDescription("**Mau ambil roles?**\nJika kalian ingin meng-akses seluruh channel, kalian harus memiliki roles <@&794156543204392961>. Untuk mendapatkannya silahkan [baca ini](https://osu.troke.id/discordtokens) pastikan kalian harus memiliki akun Datenshi!\n\n• <:modemania:800724455126335538> - MANIA\n• <:modeosu:800724455579713536> - STD\n• <:modetaiko:800724456070447196> - TAIKO\n• <:modefruits:800724454980190228> - CTB\n• 🔞 - Akses mantap-mantap")
+		.addField("💡 Common Roles", "<@&818101962859085855> - Access to all channels by getting this roles, you must link your account using our Bot, [how to get](https://osu.troke.id/discordtokens)\n<@&836434045205217290> - This roles is for our minecraft servers\n<@&794909882724646912> - This roles are optional (only available for indonesia), if you want to get this roles, please [read this](https://osu.troke.id/liveplay)\n<@&713455119676473445> - Access to R18+ channels, this need Little Demons role before get this role")
+        .addField("<:modeosu:800724455579713536> Mode Roles", "<@&836435419436154941> - If you are vanilla player, get this roles!\n<@&763293295949905950> - If you are relax player, get this roles!\n<@&705431734526672968> - osu!std\n<@&705431799114760253> - osu!taiko\n<@&705431835710062635> - osu!catch\n<@&705431631925739631> - osu!mania")
+        .addField("🔵 How to get roles?", "Use command `!roles [options]` here\nAvailable roles options :\n`r18`, `minecraft`, `vanilla`, `relax`, `std`, `ctb`, `taiko`, `mania`")
 		message.channel.send(embed)
-		.then(message => { 
-			message.react(client.config.role.mania_emoji)
-			message.react(client.config.role.std_emoji)
-			message.react(client.config.role.taiko_emoji)
-			message.react(client.config.role.ctb_emoji)
-			message.react("🔞")
-		});
     }
 }

@@ -23,7 +23,7 @@ module.exports = {
      */
     run: async (client, message, args) => {
         if(message.channel.type != "dm") return;
-        if(!args.length || !args[0]) return message.channel.send("Masukin token!");
+        if(!args.length || !args[0]) return message.channel.send("Please input the token!");
         var msg = args.join(" ")
         try {
             var getDCid = message.author.id;
@@ -34,7 +34,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
 		        .setTitle("Congratulations!")
 		        .setColor(hex)
-		        .setDescription(`Selamat **${getUser[0].username}**! proses verifikasi sudah selesai!\n\nJangan lupa untuk membaca [peraturan](https://osu.troke.id/doc/rules) dan untuk bantuan lainnya bisa segera mention salah satu staff atau tanyakan di channel "#issue-help" \n\n[Website](https://osu.troke.id/) | [Facebook Group](https://www.facebook.com/groups/osu.datenshi) | [Facebook Page](https://www.facebook.com/gaming/datenshicommunity/) | [YouTube](https://www.youtube.com/channel/UCKwyGpWAD17sVpKwlRDhisw) | [GitHub](https://github.com/osu-datenshi)`)
+		        .setDescription(`Congratulations, your account **${getUser[0].username}** has been linked to your discord account! now you can access to all of our channels!\n\nDon't forget to read [the rules](https://osu.troke.id/doc/rules) and if you need some help, you can contact our staff!" \n\n[Website](https://osu.troke.id/) | [Facebook Group](https://www.facebook.com/groups/osu.datenshi) | [Facebook Page](https://www.facebook.com/gaming/datenshicommunity/) | [YouTube](https://www.youtube.com/channel/UCKwyGpWAD17sVpKwlRDhisw) | [GitHub](https://github.com/osu-datenshi)`)
                 .setImage("https://cdn.troke.id/static/logos/datenshi.png")
 
                 message.channel.send(embed);
@@ -45,11 +45,11 @@ module.exports = {
                 DatenshiGuild.member(message.author).roles.add(tenshiRole)
                 await pool.query("UPDATE discord_tokens SET userid = ?, discord_id = ?, role_id = ?, verified = 1 WHERE token = ?", [getUser[0].userid, getDCid, tenshiRole, msg]);
             } else {
-                message.channel.send("Error: Sudah terverifikasi!")
+                message.channel.send("Error: You already verified! please use `@unlink` if you want to generate new token")
             }
         } catch (error) {
             console.log(error);
-	        message.channel.send("Token lu mana bro?");
+	        message.channel.send("Where is your token?");
         }
     }
 }

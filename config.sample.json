@@ -27,20 +27,17 @@
       "prefix": "@"
     },
     "role": {
-        "getrolesCH": "",
-        "mania_emoji": "",
-        "std_emoji": "",
-        "taiko_emoji": "",
-        "ctb_emoji": "",
         "mania_role": "",
         "std_role": "",
         "taiko_role": "",
         "ctb_role": "",
         "tenshi_role": "",
-        "mantap_role": ""
+        "mantap_role": "",
+        "minecraft_role": ""
       },
     "db": {
       "host": "",
+      "port": "3306",
       "username": "",
       "password": "",
       "database": ""
@@ -50,23 +47,8 @@
       "password": ""
     },
     "blacklisted_words": [
-      "ainu",
-      "kotorikku",
-      "toh.ru",
-      "ryusei",
-      "ryu-sei",
-      "waving",
-      "enjuu",
-      "verge",
-      "toh ru",
-      "toh-ru",
-      "drop database",
-      "drop database ripple",
-      "drop database ripple;",
-      "puki",
-      "sapi",
-      "p u k i",
-      "s a p i",
-      "s    a    p      i"
+      "ngentot",
+      "babi",
+      "anjing"
     ]
   }

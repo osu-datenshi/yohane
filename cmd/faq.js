@@ -12,6 +12,13 @@ const subcommands = {
     .setTitle("Banned/Restricted")
     .setDescription("Kamu terbanned? Restrict? silahkan [baca ini](https://osu.troke.id/doc/liveplay)"),
 
+    switcher: (embed) => embed
+    .setTitle("Switcher")
+    .setDescription("[Link Switcher](https://osu.troke.id/switcher)")
+    .addField("Kak, Switcher ku kok force close ya?", "Pastikan kamu sudah menjalankannnya menggunakan **run as administrator**")
+    .addField("Kak, Switchernya muncul error ketika mau connect", "Tolong kirimkan bukti errornya ke channel <#698597147553169429> agar bisa dibantu mengenai permasalahannya")
+    .addField("Kok masih error terus??", "Silahkan gunakan cara manual, ini adalah cara tanpa menggunakan switcher, gunakan [link ini](https://osu.troke.id/doc/install_certificate_and_hosts_manually)"),
+
     contact: (embed) => embed
     .setTitle("Contacting Datenshi's Staff")
     .setDescription("Jika ingin menghubungi staff, silahkan mention <@&794852916305330196> dan <@&794180047882813440> ! Tolong jangan mention <@&794156391342145586>, untuk bug/report silahkan ke [github](https://github.com/osu-datenshi) kami"),
