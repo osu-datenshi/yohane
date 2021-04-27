@@ -15,9 +15,11 @@ module.exports = {
 		let hex = parseInt(color.replace(/^#/, ''), 16);
 
 		const embed = new Discord.MessageEmbed()
-		.setTitle("Bagaimana cara mendapatkan roles?")
+		.setTitle("Roles")
 		.setColor(hex)
-		.setDescription("Buat yang ingin melihat ke semua channels, kalian diharuskan menghubungkan account Discord dengan account Datenshi kalian agar bisa mendapatkan role <@&818101962859085855>, untuk menghubungkannya silahkan ke [link ini](https://osu.troke.id/discordtokens)\n*Sangat disarankan menggunakan 1 account Discord dan 1 account Datenshi, selebihnya tidak bisa!*")
+		.addField("💡 Common Roles", "<@&818101962859085855> - Access to all channels by getting this roles, you must link your account using our Bot, [how to get](https://osu.troke.id/discordtokens)\n<@&836434045205217290> - This roles is for our minecraft servers\n<@&794909882724646912> - This roles are optional (only available for indonesia), if you want to get this roles, please [read this](https://osu.troke.id/liveplay)\n<@&713455119676473445> - Access to R18+ channels, this need Little Demons role before get this role")
+        .addField("<:modeosu:800724455579713536> Mode Roles", "<@&836435419436154941> - If you are vanilla player, get this roles!\n<@&763293295949905950> - If you are relax player, get this roles!\n<@&705431734526672968> - osu!std\n<@&705431799114760253> - osu!taiko\n<@&705431835710062635> - osu!catch\n<@&705431631925739631> - osu!mania")
+        .addField("🔵 How to get roles?", "Use command `!roles [options]` here\nAvailable roles options :\n`r18`, `minecraft`, `vanilla`, `relax`, `std`, `ctb`, `taiko`, `mania`")
 		message.channel.send(embed)
     }
 }

@@ -19,7 +19,6 @@ module.exports = {
     /**
      * @param {import("discord.js").Client} client
      * @param {import("discord.js").Message} message
-     * @param {string[]} args
      */
     run: async (client, message) => {
         if(message.channel.type != "dm") return;
@@ -32,7 +31,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
 		        .setTitle("Congratulations!")
 		        .setColor(hex)
-		        .setDescription(`Your account **${getUser[0].username}** successfully unlinked, now you can generate new tokens again for your another discord account!\n\nDon't forget to read [the rules](https://osu.troke.id/doc/rules) and if you need some help, you can contact to our staff! \n\n[Website](https://osu.troke.id/) | [Facebook Group](https://www.facebook.com/groups/osu.datenshi) | [Facebook Page](https://www.facebook.com/gaming/datenshicommunity/) | [YouTube](https://www.youtube.com/channel/UCKwyGpWAD17sVpKwlRDhisw) | [GitHub](https://github.com/osu-datenshi)`)
+		        .setDescription(`Your account successfully unlinked, now you can generate new tokens again for your another discord account!\n\nDon't forget to read [the rules](https://osu.troke.id/doc/rules) and if you need some help, you can contact to our staff! \n\n[Website](https://osu.troke.id/) | [Facebook Group](https://www.facebook.com/groups/osu.datenshi) | [Facebook Page](https://www.facebook.com/gaming/datenshicommunity/) | [YouTube](https://www.youtube.com/channel/UCKwyGpWAD17sVpKwlRDhisw) | [GitHub](https://github.com/osu-datenshi)`)
                 .setImage("https://cdn.troke.id/static/logos/datenshi.png")
 
                 message.channel.send(embed);
