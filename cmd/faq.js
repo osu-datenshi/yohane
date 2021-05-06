@@ -1,12 +1,16 @@
 const subcommands = {
     help: (embed) => embed
     .setTitle("FAQ Help")
-    .setDescription("Berikut ini adalah command yang tersedia pada bot discord\n**Umum**\n`email` - `banned` - `contact` - `pp` - `koneksi` - `help` - `donate` - `vpn` - `name` - `wipe` - `clan` - `report` - `map` - `role` - `absen` - `link`\n**Stats**\n`recent` - @recent (vanilla/relax)\n`top` - @top (vanilla/relax)\n`stats` - @stats (vanilla/relax)")
+    .setDescription("Full list available bot commands here\n**Common**\n`email` - `banned` - `contact` - `pp` - `koneksi` - `help` - `donate` - `vpn` - `name` - `wipe` - `clan` - `report` - `map` - `role` - `absen` - `link` - `unlink` - `chan`\n**Stats**\n`recent` - @recent (vanilla/relax)\n`top` - @top (vanilla/relax)\n`stats` - @stats (vanilla/relax)")
     .setImage("https://cdn.troke.id/static/logos/datenshi.png"),
 
     email: (embed) => embed
     .setTitle("Email Verification")
     .setDescription("Tidak ada verifikasi email!\nSemua dilakukan lewat in-game!\n**Kalian cukup in-game setelah melakukan registrasi dan kalian sudah terverifikasi!!**"),
+
+    chan: (embed) => embed
+    .setTitle("Warning!")
+    .setDescription("Please consider to look the channels topic!"),
 
     banned: (embed) => embed
     .setTitle("Banned/Restricted")
@@ -55,11 +59,7 @@ const subcommands = {
 
     pp: (embed) => embed
     .setTitle("PP Limit")
-    .addField("Apa ini?", "PP Limit adalah sistem pembatasan total limit pp yang didapatkan oleh player, kalian nanti akan mendapatkan sebuah pesan dari Yohane ketika PP sudah mencapai limit. **Ingat** ini bukan pemberitahuan banned, melainkan pemberitahuan limit pp dan bukan yang lain!")
-    .addField("Mode apa saja yang dilimit?", "Vanilla dan Relax")
-    .addField("Kenapa begitu?", "Fungsinya buat cegah pp-abuse sama cheater, jadi kalau kamu kena limit nanti dapet 0pp")
-    .addField("Limitnya emang berapa?", "5000pp (STD), 8888pp (Taiko), 8888pp (CTB), 9999pp (mania)")
-    .addField("Cara biar ga kena limit?", "1. Pergilah ke channel <#698597147553169429>\n2. Kemudian kirimkan sebuah screenshot yang terdapat pesan pemberitahuan dari Yohane seperti [contoh ini](https://cdn.discordapp.com/attachments/698597147553169429/816492708356423680/screenshot308.jpg)\n3. Kemudian mention salah satu staff untuk bisa di whitelist dan tunggu pemberitahuan dari staff"),
+    .setDescription("For players who don't know about the limiter, please [read the documentations](https://osu.troke.id/doc/13)"),
     
     clan: (embed) => embed
     .setTitle("Clan")
@@ -74,7 +74,7 @@ const subcommands = {
     
     link: (embed) => embed
     .setTitle("Link Account")
-    .setDescription("Bagi yang belum tau caranya untuk link account kalian, cukup [klik link ini](https://osu.troke.id/discordtokens)"),
+    .setDescription("How to link your datenshi account with discord? [click here](https://osu.troke.id/discordtokens)"),
 
     donate: (embed) => embed
     .setTitle("Donate")
