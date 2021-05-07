@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const { pool } = require("../handlers/databaseHandler");
 
 const subcommands = {
 
@@ -8,11 +9,21 @@ const subcommands = {
      * @param {string[]} args 
      */
     r18: async (client, message, args) => {
-        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
-        if (message.member.roles.cache.some(role => (role.name == "R18"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
+        // SILENT EVERYTHING IN HERE
+        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return;
+        if (message.member.roles.cache.some(role => (role.name == "R18"))) return;
+        // message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
+        try {
+            pool.query('select d.userid, u.country from discord_tokens d left join users_stats u on d.userid = u.id where d.discord_id = ?', [message.author.id], function (er, result, field){
+                if(!result.length) throw new Error('jmbt'); // not possible to hit this.
+                if(![].all.call(result,function(x){return x.country == config.bot.negara;})) throw new Error('not eligible'); // not eligible
+            });
+        } catch (ex) {
+            return;
+        }
         try {
             var getDCid = message.author.id;
-            message.channel.send(`<@${getDCid}> R18 Added!`).then(msg => msg.delete({timeout: 10000}));
+            //message.channel.send(`<@${getDCid}> R18 Added!`).then(msg => msg.delete({timeout: 10000}));
             message.guild.members.cache.get(getDCid).roles.add(client.config.role.mantap_role)
         } catch (ex) {
             message.channel.send("Error!");
