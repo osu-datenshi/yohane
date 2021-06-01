@@ -14,7 +14,7 @@ async function getTokenDaten(Token) {
 }
 
 module.exports = {
-    name: "verify",
+    name: "link",
 
     /**
      * @param {import("discord.js").Client} client

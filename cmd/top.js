@@ -80,7 +80,7 @@ const subcommands = {
             .addField("Download Beatmap:", "[osu!](https://osu.ppy.sh/d/" + recentScore[0].beatmapset_id +") • [beatconnect](https://beatconnect.io/b/" + recentScore[0].beatmapset_id +") • [datenshi](https://osu.troke.id/d/" + recentScore[0].beatmapset_id +")")
             message.channel.send(embed);
         } catch (ex) {
-            message.channel.send("Maaf user tidak dapat ditemukan, silahkan link account jika belum ada!");
+            message.channel.send("User not found, please @link first!");
         }
     },
 
@@ -130,7 +130,7 @@ const subcommands = {
             .addField("PP:", formatNumber(Math.round(0.0 + recentScore[0].pp)), true)
             .addField("Score:", formatNumber(recentScore[0].score), true)
             .addField("Accuracy:", recentScore[0].accuracy.toFixed(2) + "%", true)
-	    .addField("Rank:", getRank(recentScore[0].play_mode, recentScore[0].mods, recentScore[0].accuracy, recentScore[0]['300_count'], recentScore[0]['100_count'], recentScore[0]['50_count'], recentScore[0].misses_count))
+	        .addField("Rank:", getRank(recentScore[0].play_mode, recentScore[0].mods, recentScore[0].accuracy, recentScore[0]['300_count'], recentScore[0]['100_count'], recentScore[0]['50_count'], recentScore[0].misses_count))
             .addField("Mode:", mode)
             .addField("Artist:", recentScore[0].artist)
             .addField("Title:", recentScore[0].title)
@@ -138,7 +138,7 @@ const subcommands = {
             .addField("Download Beatmap:", "[osu!](https://osu.ppy.sh/d/" + recentScore[0].beatmapset_id +") • [beatconnect](https://beatconnect.io/b/" + recentScore[0].beatmapset_id +") • [datenshi](https://osu.troke.id/d/" + recentScore[0].beatmapset_id +")")
             message.channel.send(embed);
         } catch (ex) {
-            message.channel.send("Maaf user tidak dapat ditemukan, silahkan link account jika belum ada!");
+            message.channel.send("User not found, please @link first!");
         }
     }
 

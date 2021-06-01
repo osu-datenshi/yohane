@@ -62,7 +62,7 @@ const subcommands = {
             message.channel.send(embed)
         } catch (ex) {
             console.log(ex);
-            message.channel.send("Maaf user tidak dapat ditemukan, silahkan link account jika belum ada!");
+            message.channel.send("User not found, please @link first!");
         }
     },
 
@@ -92,7 +92,7 @@ const subcommands = {
             .addField("**Ranked Scores**", "<:modeosu:800724455579713536> : " + formatNumber(userStats[0].ranked_score_std) + " ▸ (Lv. " + userStats[0].level_std + ")\n<:modetaiko:800724456070447196> : " + formatNumber(userStats[0].ranked_score_taiko) + " ▸ (Lv. " + userStats[0].level_taiko + ")\n<:modefruits:800724454980190228> : " + formatNumber(userStats[0].ranked_score_ctb) + " ▸ (Lv. " + userStats[0].level_mania + ")")
             message.channel.send(embed)
         } catch (ex) {
-            message.channel.send("Maaf user tidak dapat ditemukan, silahkan link account jika belum ada!");
+            message.channel.send("User not found, please @link first!");
         }
     }
 
