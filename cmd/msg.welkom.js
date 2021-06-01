@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const randomcolor_1 = require("randomcolor");
 
 module.exports = {
     name: "welkom",
@@ -11,18 +10,43 @@ module.exports = {
      */
     run: async (client, message, args) => {
         if (message.member.id != client.config.bot.owner_id) return message.channel.send("This is reserved for ilyt, sorry!");
-		let color = randomcolor_1.randomColor();
-		let hex = parseInt(color.replace(/^#/, ''), 16);
+		let hex = 10181046;
 
-		const embed = new Discord.MessageEmbed()
-		.setTitle("DATENSHI REBORN")
+		const welcome = new Discord.MessageEmbed()
+		.setAuthor("ABOUT US", "https://raw.githubusercontent.com/osu-datenshi/assets/master/logo.png", "https://datenshi.troke.id")
 		.setColor(hex)
-		.addField("Welcome! Selamat Datang!", "\nDatenshi is reborn! The first osu! private server in Indonesia, we are back with lot of features, we bring your games to enjoy with us!")
-		.addField("Rules", "\n1. Do not spam in chat\n2. Please respect each other\n3. Do not post NSFW in general!\n5. Please make sure link you osu account with discord before chat!\n6. Do not out of topic from the channels!")
-		.addField("Links", "\n<:globe_with_meridians:794942554352517130> [Website](https://osu.troke.id)\n<:regional_indicator_f:794942986282205185> [Facebook Group](https://www.facebook.com/groups/osu.datenshi)\n<:heart:794942554352517130> [Donate Indonesia](https://trakteer.id/datenshi) | [Donate International](https://ko-fi.com/datenshicommunity)")
-		.addField("Need some help?", "• Use command `@faq help`\n• Go to channels <#698597147553169429>\n• Mention staff <@&794913317322883073> dan <@&794852916305330196>")
-		.addField("Invite Code", client.config.bot.invitecode)
-		.setImage("https://cdn.troke.id/static/logos/datenshi.png")
-		message.channel.send(embed)
+		.setDescription("DATENSHI is a multi-gaming community server founded in 12 April 2020 Indonesia. We have two games community server that we served to the players, there are osu! and Minecraft.\n\nosu! is the first and the largest one community server in Indonesia, we are providing the home for players who dont have any 'place' to take shelter\n\nMinecraft, this is the best solution for people who tired for clicking circles in osu! and trying to build or survive in the game.\n\nOur community is filled with amazing people and very active members that make DATENSHI is more very interesting, don't hesitate to join us!")
+		.setImage("https://cdn.discordapp.com/attachments/728581754398572546/849187512689360906/DATENSHI_BANNER.png")
+
+		const osu = new Discord.MessageEmbed()
+		.setAuthor("osu! server", "https://raw.githubusercontent.com/osu-datenshi/assets/master/logo.png", "https://osu.troke.id")
+		.setColor(hex)
+		.setDescription("If you are osu! player, please read this\n")
+		.addField("Invite Code", "" + client.config.bot.invitecode + "Please use this code for registration!")
+		.addField("Connecting Guide", "You can go to the [website](https://osu.troke.id/doc/1) for the tutorial")
+		.addField("Help Assistant", "If you need some help, go to this channel <#698597147553169429>")
+		.setImage("https://cdn.discordapp.com/attachments/728581754398572546/849194673507663933/osu.png")
+
+		const minecraft = new Discord.MessageEmbed()
+		.setAuthor("Minecraft server", "https://raw.githubusercontent.com/osu-datenshi/assets/master/logo.png", "https://datenshi.troke.id")
+		.setColor(hex)
+		.setDescription("If you are Minecraft player, please read this\n")
+		.addField("Server IP", "`mc.trokeid`")
+		.addField("Version", "1.16.5 (cracked)")
+		.addField("Features", "- Shop\n- Discord Integration\n- Survival Mode\n- Gacha Crates\n- Vote Rewards\nMuch more..")
+		.addField("Help Assistant", "If you need some help, go to this channel <#843190309274124350>")
+		.setImage("https://cdn.discordapp.com/attachments/728581754398572546/849196032486015046/minecraft.png")
+
+		const linksbro = new Discord.MessageEmbed()
+		.setAuthor("LINKS", "https://raw.githubusercontent.com/osu-datenshi/assets/master/logo.png", "https://datenshi.troke.id")
+		.setColor(hex)
+		.setDescription("- [Website](https://datenshi.troke.id)\n- [osu! Website](https://osu.troke.id)\n- [osu! Documentation](https://osu.troke.id/doc)\n- [osu! Register](https://osu.troke.id/register)\n- [GitHub](https://github.com/osu-datenshi)\n- [GitLab](https://gitlab.com/osudatenshi)\n- [Facebook Page](https://www.facebook.com/datenshicommunity)\n- [Facebook Group](https://www.facebok.com/groups/osu.datenshi)\n- [Youtube](https://www.youtube.com/channel/UCKwyGpWAD17sVpKwlRDhisw)")
+		.addField("Donations","- [Indonesia](https://trakteer.id/datenshi)\n- [International](https://ko-fi.com/datenshicommunity)")
+		.setImage("https://cdn.discordapp.com/attachments/728581754398572546/849197933714341888/links_1.png")
+
+		message.channel.send(welcome)
+		message.channel.send(osu)
+		message.channel.send(minecraft)
+		message.channel.send(linksbro)
     }
 }
