@@ -27,17 +27,13 @@
       "prefix": "@"
     },
     "role": {
-        "getrolesCH": "",
-        "mania_emoji": "",
-        "std_emoji": "",
-        "taiko_emoji": "",
-        "ctb_emoji": "",
         "mania_role": "",
         "std_role": "",
         "taiko_role": "",
         "ctb_role": "",
         "tenshi_role": "",
-        "mantap_role": ""
+        "mantap_role": "",
+        "minecraft_role": ""
       },
     "db": {
       "host": "",
