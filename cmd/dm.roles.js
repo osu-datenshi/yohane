@@ -11,7 +11,7 @@ const subcommands = {
     r18: async (client, message, args) => {
         // SILENT EVERYTHING IN HERE
 	// R18 FOR EVERYONE!!!!
-        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return;
+        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "R18"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         //try {
         //    pool.query('select d.userid, u.country from discord_tokens d left join users_stats u on d.userid = u.id where d.discord_id = ?', [message.author.id], function (er, result, field){
@@ -25,6 +25,30 @@ const subcommands = {
             var getDCid = message.author.id;
             message.channel.send(`<@${getDCid}> R18 Added!`).then(msg => msg.delete({timeout: 10000}));
             message.guild.members.cache.get(getDCid).roles.add(client.config.role.mantap_role)
+        } catch (ex) {
+            message.channel.send("Error!");
+        }
+    },
+
+    indonesia: async (client, message, args) => {
+        //if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (message.member.roles.cache.some(role => (role.name == "Indonesia"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
+        try {
+            var getDCid = message.author.id;
+            message.channel.send(`<@${getDCid}> Indonesia Added!`).then(msg => msg.delete({timeout: 10000}));
+            message.guild.members.cache.get(getDCid).roles.add(client.config.role.indonesian_role)
+        } catch (ex) {
+            message.channel.send("Error!");
+        }
+    },
+
+    international: async (client, message, args) => {
+        //if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (message.member.roles.cache.some(role => (role.name == "International"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
+        try {
+            var getDCid = message.author.id;
+            message.channel.send(`<@${getDCid}> International Added!`).then(msg => msg.delete({timeout: 10000}));
+            message.guild.members.cache.get(getDCid).roles.add(client.config.role.international_role)
         } catch (ex) {
             message.channel.send("Error!");
         }
@@ -103,7 +127,7 @@ const subcommands = {
     },
 
     minecraft: async (client, message, args) => {
-        if (message.member.roles.cache.some(role => (role.name == "Minecraft"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (message.member.roles.cache.some(role => (role.name == "minecraft"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
             var getDCid = message.author.id;
             message.channel.send(`<@${getDCid}> Minecraft Added!`).then(msg => msg.delete({timeout: 10000}));
