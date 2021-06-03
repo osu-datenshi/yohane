@@ -41,7 +41,7 @@ module.exports = {
 		.setAuthor("HOW TO GET THE ROLES", "https://raw.githubusercontent.com/osu-datenshi/assets/master/logo.png", "https://datenshi.troke.id")
 		.setColor(hex)
 		.addField("General Roles", "`r18`, `indonesia`, `international`", true)
-        .addField("osu! Roles", "`vanilla`, `relax`, `std`, `taiko`, `ctb`, `mania`", true)
+        .addField("osu! Roles", "`osu`, `vanilla`, `relax`, `std`, `taiko`, `ctb`, `mania`", true)
         .addField("Minecraft Roles", "`minecraft`", true)
         .addField("Notes", "- All of osu! roles need <@&818101962859085855> roles to be required.\n\n- `r18` also needed <@&818101962859085855> or contact to the staff if you want to access that channels, NSFW Channels must be 18 or higher to access them\n\n- Please use `@roles` command on this channels only!")
         .addField("Commands", "Use this command for get the roles, example:\n`@roles minecraft`")

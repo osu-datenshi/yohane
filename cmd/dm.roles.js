@@ -30,6 +30,18 @@ const subcommands = {
         }
     },
 
+    osu: async (client, message, args) => {
+        //if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (message.member.roles.cache.some(role => (role.name == "osu"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
+        try {
+            var getDCid = message.author.id;
+            message.channel.send(`<@${getDCid}> osu! Added!`).then(msg => msg.delete({timeout: 10000}));
+            message.guild.members.cache.get(getDCid).roles.add(client.config.role.osu_role)
+        } catch (ex) {
+            message.channel.send("Error!");
+        }
+    },
+
     indonesia: async (client, message, args) => {
         //if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "Indonesia"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
