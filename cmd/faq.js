@@ -6,7 +6,7 @@ const subcommands = {
 
     email: (embed) => embed
     .setTitle("Email Verification")
-    .setDescription("Tidak ada verifikasi email!\nSemua dilakukan lewat in-game!\n**Kalian cukup in-game setelah melakukan registrasi dan kalian sudah terverifikasi!!**"),
+    .setDescription("No email verification needed!\n**You just need to login into the game and your account successfully activated!!**"),
 
     chan: (embed) => embed
     .setTitle("Warning!")
@@ -14,7 +14,7 @@ const subcommands = {
 
     banned: (embed) => embed
     .setTitle("Banned/Restricted")
-    .setDescription("Kamu terbanned? Restrict? silahkan [baca ini](https://osu.troke.id/doc/liveplay)"),
+    .setDescription("Contact Admin for appeal"),
 
     switcher: (embed) => embed
     .setTitle("Switcher")
