@@ -31,7 +31,7 @@ module.exports = {
 		.setDescription("If you are osu! player, please read this\n")
 		.addField("Invite Code", "" + client.config.bot.invitecode + "Please use this code for registration!")
 		.addField("Connecting Guide", "You can go to the [website](https://osu.troke.id/doc/1) for the tutorial")
-		.addField("Help Assistant", "If you need some help, go to this channel <#698597147553169429>")
+		.addField("Help Assistant", "If you need some help, go to this channel <#853228318400708649>")
 
 		const bannerminecraft = new Discord.MessageEmbed()
 		.setColor(hex)
@@ -44,7 +44,7 @@ module.exports = {
 		.addField("Server IP", "`mc.troke.id`")
 		.addField("Version", "1.16.5")
 		.addField("Features", "- Shop\n- Discord Integration\n- Survival Mode\n- Gacha Crates\n- Vote Rewards\nMuch more..")
-		.addField("Help Assistant", "If you need some help, go to this channel <#843190309274124350>")
+		.addField("Help Assistant", "If you need some help, go to this channel <#853236312466522142>")
 
 		const bannerlinks = new Discord.MessageEmbed()
 		.setColor(hex)

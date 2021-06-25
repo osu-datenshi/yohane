@@ -11,7 +11,7 @@ const subcommands = {
     r18: async (client, message, args) => {
         // SILENT EVERYTHING IN HERE
 	// R18 FOR EVERYONE!!!!
-        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "R18"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         //try {
         //    pool.query('select d.userid, u.country from discord_tokens d left join users_stats u on d.userid = u.id where d.discord_id = ?', [message.author.id], function (er, result, field){
@@ -67,7 +67,7 @@ const subcommands = {
     },
 
     vanilla: async (client, message, args) => {
-        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "Vanilla"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
             var getDCid = message.author.id;
@@ -79,7 +79,7 @@ const subcommands = {
     },
 
     relax: async (client, message, args) => {
-        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "Relaxers"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
             var getDCid = message.author.id;
@@ -91,7 +91,7 @@ const subcommands = {
     },
 
     std: async (client, message, args) => {
-        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "STD"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
             var getDCid = message.author.id;
@@ -103,7 +103,7 @@ const subcommands = {
     },
 
     taiko: async (client, message, args) => {
-        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "TAIKO"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
             var getDCid = message.author.id;
@@ -115,7 +115,7 @@ const subcommands = {
     },
 
     ctb: async (client, message, args) => {
-        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "CTB"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
             var getDCid = message.author.id;
@@ -127,7 +127,7 @@ const subcommands = {
     },
 
     mania: async (client, message, args) => {
-        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
+        if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "MANIA"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
             var getDCid = message.author.id;
@@ -163,6 +163,10 @@ module.exports = {
         if(!args.length || !args[0]) return message.channel.send("This is not a valid option.");
         // sudah hilang kawan
         // if (message.author.id){ message.delete({timeout: 5000}) }
+        const littledemons = new Discord.MessageEmbed()
+        .setColor(10181046)
+        .setDescription("Sorry! You need <@818101962859085855> roles for this, that mean you need to link your osu! Datenshi account with your Discord for get other roles! [please read this](https://osu.troke.id/discortokens)"),
+    
         const subcmd = args.shift()
         const sub = subcommands[subcmd]
         if(!sub) return;
