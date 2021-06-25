@@ -14,7 +14,7 @@ const subcommands = {
 
     banned: (embed) => embed
     .setTitle("Banned/Restricted")
-    .setDescription("Kamu terbanned? Restrict? silahkan [baca ini](https://osu.troke.id/doc/liveplay)"),
+    .setDescription("Contact Admin for appeal"),
 
     contact: (embed) => embed
     .setTitle("Contacting Datenshi's Staff")
