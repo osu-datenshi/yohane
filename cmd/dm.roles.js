@@ -1,10 +1,6 @@
 const Discord = require('discord.js');
 const { pool } = require("../handlers/databaseHandler");
 
-const littledemons = new Discord.MessageEmbed()
-.setColor(10181046)
-.setDescription("Sorry! You need <@818101962859085855> roles for this, that mean you need to link your osu! Datenshi account with your Discord for get other roles! [please read this](https://osu.troke.id/discortokens)"),
-
 const subcommands = {
 
     /**
@@ -12,9 +8,14 @@ const subcommands = {
      * @param {import("discord.js").Message} message 
      * @param {string[]} args 
      */
+    
     r18: async (client, message, args) => {
         // SILENT EVERYTHING IN HERE
 	// R18 FOR EVERYONE!!!!
+    const littledemons = new Discord.MessageEmbed()
+    .setColor(10181046)
+    .setDescription("Sorry! You need <@818101962859085855> roles for this, that mean you need to link your osu! Datenshi account with your Discord for get other roles! [please read this](https://osu.troke.id/discortokens)"),
+
         if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "R18"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         //try {
@@ -35,6 +36,7 @@ const subcommands = {
     },
 
     osu: async (client, message, args) => {
+        
         //if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send("Sorry, you need Little Demons roles before get this roles!").then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "osu"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
@@ -71,6 +73,10 @@ const subcommands = {
     },
 
     vanilla: async (client, message, args) => {
+        const littledemons = new Discord.MessageEmbed()
+        .setColor(10181046)
+        .setDescription("Sorry! You need <@818101962859085855> roles for this, that mean you need to link your osu! Datenshi account with your Discord for get other roles! [please read this](https://osu.troke.id/discortokens)"),
+
         if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "Vanilla"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
@@ -83,6 +89,10 @@ const subcommands = {
     },
 
     relax: async (client, message, args) => {
+        const littledemons = new Discord.MessageEmbed()
+        .setColor(10181046)
+        .setDescription("Sorry! You need <@818101962859085855> roles for this, that mean you need to link your osu! Datenshi account with your Discord for get other roles! [please read this](https://osu.troke.id/discortokens)"),
+
         if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "Relaxers"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
@@ -95,6 +105,10 @@ const subcommands = {
     },
 
     std: async (client, message, args) => {
+        const littledemons = new Discord.MessageEmbed()
+        .setColor(10181046)
+        .setDescription("Sorry! You need <@818101962859085855> roles for this, that mean you need to link your osu! Datenshi account with your Discord for get other roles! [please read this](https://osu.troke.id/discortokens)"),
+
         if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "STD"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
@@ -107,6 +121,10 @@ const subcommands = {
     },
 
     taiko: async (client, message, args) => {
+        const littledemons = new Discord.MessageEmbed()
+        .setColor(10181046)
+        .setDescription("Sorry! You need <@818101962859085855> roles for this, that mean you need to link your osu! Datenshi account with your Discord for get other roles! [please read this](https://osu.troke.id/discortokens)"),
+
         if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "TAIKO"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
@@ -119,6 +137,10 @@ const subcommands = {
     },
 
     ctb: async (client, message, args) => {
+        const littledemons = new Discord.MessageEmbed()
+        .setColor(10181046)
+        .setDescription("Sorry! You need <@818101962859085855> roles for this, that mean you need to link your osu! Datenshi account with your Discord for get other roles! [please read this](https://osu.troke.id/discortokens)"),
+
         if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "CTB"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
@@ -131,6 +153,10 @@ const subcommands = {
     },
 
     mania: async (client, message, args) => {
+        const littledemons = new Discord.MessageEmbed()
+        .setColor(10181046)
+        .setDescription("Sorry! You need <@818101962859085855> roles for this, that mean you need to link your osu! Datenshi account with your Discord for get other roles! [please read this](https://osu.troke.id/discortokens)"),
+
         if (!message.member.roles.cache.some(role => (role.name == "Little Demons"))) return message.channel.send(littledemons).then(msg => msg.delete({timeout: 10000}));
         if (message.member.roles.cache.some(role => (role.name == "MANIA"))) return message.channel.send("Sorry, you already have this roles!").then(msg => msg.delete({timeout: 10000}));
         try {
