@@ -67,13 +67,13 @@ module.exports = {
 		.setColor(hex)
 		.setDescription("- [Website](https://datenshi.troke.id)\n- [osu! Website](https://osu.troke.id)\n- [osu! Documentation](https://osu.troke.id/doc)\n- [osu! Register](https://osu.troke.id/register)\n- [GitHub](https://github.com/osu-datenshi)\n- [GitLab](https://gitlab.com/osudatenshi)\n- [Facebook Page](https://www.facebook.com/datenshicommunity)\n- [Facebook Group](https://www.facebok.com/groups/osu.datenshi)\n- [Youtube](https://www.youtube.com/channel/UCKwyGpWAD17sVpKwlRDhisw)\n- [Donate](https://datenshi.troke.id/donations)")
 
-		message.channel.send(bannerWelcome)
+		message.channel.send({ bannerWelcome })
 		message.channel.send(welcome)
-		message.channel.send(bannerosu)
+		message.channel.send({ bannerosu })
 		message.channel.send(osu)
-		message.channel.send(bannerminecraft)
+		message.channel.send({ bannerminecraft })
 		message.channel.send(minecraft)
-		message.channel.send(bannerlinks)
+		message.channel.send({ bannerlinks })
 		message.channel.send(linksbro)
     }
 }
