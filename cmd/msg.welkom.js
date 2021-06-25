@@ -22,7 +22,6 @@ module.exports = {
 		.setDescription("DATENSHI is a multi-gaming community server founded in 12 April 2020 Indonesia. We have two games community server that we served to the players, there are osu! and Minecraft.\n\nosu! is the first and the largest one community server in Indonesia, we are providing the home for players who dont have any 'place' to take shelter\n\nMinecraft, this is the best solution for people who tired for clicking circles in osu! and trying to build or survive in the game.\n\nOur community is filled with amazing people and very active members that make DATENSHI is more very interesting, don't hesitate to join us!")
 
 		const bannerosu = new Discord.Message()
-		.setColor(hex)
 		.setImage("https://cdn.discordapp.com/attachments/728581754398572546/849194673507663933/osu.png")
 
 		const osu = new Discord.MessageEmbed()
@@ -34,7 +33,6 @@ module.exports = {
 		.addField("Help Assistant", "If you need some help, go to this channel <#853228318400708649>")
 
 		const bannerminecraft = new Discord.MessageEmbed()
-		.setColor(hex)
 		.setImage("https://cdn.discordapp.com/attachments/728581754398572546/849196032486015046/minecraft.png")
 
 		const minecraft = new Discord.MessageEmbed()
@@ -47,7 +45,6 @@ module.exports = {
 		.addField("Help Assistant", "If you need some help, go to this channel <#853236312466522142>")
 
 		const bannerlinks = new Discord.MessageEmbed()
-		.setColor(hex)
 		.setImage("https://cdn.discordapp.com/attachments/728581754398572546/849197933714341888/links_1.png")
 
 		const linksbro = new Discord.MessageEmbed()
