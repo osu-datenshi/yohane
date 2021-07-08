@@ -2,7 +2,7 @@ const subcommands = {
     help: (embed) => embed
     .setTitle("FAQ Help")
     .setDescription("Full list available bot commands here\n**Common**\n`email` - `banned` - `contact` - `pp` - `koneksi` - `help` - `donate` - `vpn` - `name` - `wipe` - `clan` - `report` - `map` - `role` - `absen` - `link` - `unlink` - `chan`\n**Stats**\n`recent` - @recent (vanilla/relax)\n`top` - @top (vanilla/relax)\n`stats` - @stats (vanilla/relax)")
-    .setImage("https://cdn.troke.id/static/logos/datenshi.png"),
+    .setImage("https://cdn.datenshi.pw/static/logos/datenshi.png"),
 
     email: (embed) => embed
     .setTitle("Email Verification")
@@ -25,7 +25,7 @@ const subcommands = {
     .setDescription("There is simple guide to how to connect on datenshi")
     .addField("Step 1", "You need to copy osu icon to anywhere as a shortcut")
     .addField("Step 2", "Then right+click on icon that you made, click properties")
-    .addField("Step 3", "In properties you will see `Target location`, then you need to add `-devserver troke.id` in last text and click OK")
+    .addField("Step 3", "In properties you will see `Target location`, then you need to add `-devserver datenshi.pw` in last text and click OK")
     .addField("Step 4", "Click that shortcut and try to connect!"),
     
     role: (embed) => embed
@@ -34,16 +34,16 @@ const subcommands = {
 
     map: (embed) => embed
     .setTitle("Beatmaps")
-    .setDescription("You can directly request your map for ranked from [website](https://osu.troke.id/beatmaps/rank_request), make sure you follow the [rules](https://osu.troke.id/doc/datenshi_beatmap_criteria_en)"),
+    .setDescription("You can directly request your map for ranked from [website](https://osu.datenshi.pw/beatmaps/rank_request), make sure you follow the [rules](https://osu.datenshi.pw/doc/datenshi_beatmap_criteria_en)"),
     
     vpn: (embed) => embed
     .setTitle("VPN Tutorial")
-    .setDescription("Tutorial VPN ini berguna bagi orang yang memiliki koneksi lambat saat mendownload beatmap, silahkan [baca ini](https://osu.troke.id/doc/vpn_tutorial)"),
+    .setDescription("Tutorial VPN ini berguna bagi orang yang memiliki koneksi lambat saat mendownload beatmap, silahkan [baca ini](https://osu.datenshi.pw/doc/vpn_tutorial)"),
 
     name: (embed) => embed
     .setTitle("Change name")
-    .addField("Can i change name?", "Yes of course, you can change your name for once, but for <@&794911839951388672> they can change for unlimited [on profile settings](https://osu.troke.id/settings/changename), please make a ticket request for change your name")
-    .addField("Can i change my clan name?", "Yes of course, you need a <@&794911839951388672> status and then go to [clan settings](https://osu.troke.id/settings/changeclanname) for change your clan name!"),
+    .addField("Can i change name?", "Yes of course, you can change your name for once, but for <@&794911839951388672> they can change for unlimited [on profile settings](https://osu.datenshi.pw/settings/changename), please make a ticket request for change your name")
+    .addField("Can i change my clan name?", "Yes of course, you need a <@&794911839951388672> status and then go to [clan settings](https://osu.datenshi.pw/settings/changeclanname) for change your clan name!"),
     
     wipe: (embed) => embed
     .setTitle("Wipe Account")
@@ -51,7 +51,7 @@ const subcommands = {
 
     pp: (embed) => embed
     .setTitle("PP Limit")
-    .setDescription("For players who don't know about the limiter, please [read the documentations](https://osu.troke.id/doc/13)"),
+    .setDescription("For players who don't know about the limiter, please [read the documentations](https://osu.datenshi.pw/doc/13)"),
     
     clan: (embed) => embed
     .setTitle("Clan")
@@ -64,11 +64,11 @@ const subcommands = {
     
     link: (embed) => embed
     .setTitle("Link Account")
-    .setDescription("How to link your datenshi account with discord? [click here](https://osu.troke.id/discordtokens)"),
+    .setDescription("How to link your datenshi account with discord? [click here](https://osu.datenshi.pw/discordtokens)"),
 
     donate: (embed) => embed
     .setTitle("Donate")
-    .setDescription("Datenshi are very welcome to user who want support this server, you can go to [donations page](https://datenshi.troke.id/donations/) for see the perks and price"),
+    .setDescription("Datenshi are very welcome to user who want support this server, you can go to [donations page](https://datenshi.pw/donations/) for see the perks and price"),
 
     absen: (embed) => embed
     .setTitle("Absen Jumatan")

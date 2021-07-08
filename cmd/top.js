@@ -63,12 +63,12 @@ const subcommands = {
             }
             const embed = new Discord.MessageEmbed()
             .setTitle("Top Score For " + user[0].username)
-            .setURL("https://osu.troke.id/u/" + user[0].userid)
+            .setURL("https://osu.datenshi.pw/u/" + user[0].userid)
             .setColor(hex)
-		    .setThumbnail("https://a.troke.id/" + user[0].userid)
+		    .setThumbnail("https://a.datenshi.pw/" + user[0].userid)
             .setImage("https://assets.ppy.sh/beatmaps/" + recentScore[0].beatmapset_id + "/covers/cover.jpg")
             .setTimestamp(kali.toGMTString())
-            .setFooter(user[0].username, "https://cdn.troke.id/static/logos/text-white.png")
+            .setFooter(user[0].username, "https://cdn.datenshi.pw/static/logos/text-white.png")
             .addField("PP:", formatNumber(Math.round(0.0 + recentScore[0].pp)), true)
             .addField("Score:", formatNumber(recentScore[0].score), true)
             .addField("Accuracy:", recentScore[0].accuracy.toFixed(2) + "%", true)
@@ -77,7 +77,7 @@ const subcommands = {
             .addField("Artist:", recentScore[0].artist)
             .addField("Title:", recentScore[0].title)
             .addField("Difficulty:", recentScore[0].difficulty_name)
-            .addField("Download Beatmap:", "[osu!](https://osu.ppy.sh/d/" + recentScore[0].beatmapset_id +") • [beatconnect](https://beatconnect.io/b/" + recentScore[0].beatmapset_id +") • [datenshi](https://osu.troke.id/d/" + recentScore[0].beatmapset_id +")")
+            .addField("Download Beatmap:", "[osu!](https://osu.ppy.sh/d/" + recentScore[0].beatmapset_id +") • [beatconnect](https://beatconnect.io/b/" + recentScore[0].beatmapset_id +") • [datenshi](https://osu.datenshi.pw/d/" + recentScore[0].beatmapset_id +")")
             message.channel.send(embed);
         } catch (ex) {
             message.channel.send("User not found, please @link first!");
@@ -121,12 +121,12 @@ const subcommands = {
             }
             const embed = new Discord.MessageEmbed()
             .setTitle("Top Score For " + user[0].username)
-            .setURL("https://osu.troke.id/rx/u/" + user[0].userid)
+            .setURL("https://osu.datenshi.pw/rx/u/" + user[0].userid)
             .setColor(hex)
-            .setThumbnail("https://a.troke.id/" + user[0].userid)
+            .setThumbnail("https://a.datenshi.pw/" + user[0].userid)
             .setImage("https://assets.ppy.sh/beatmaps/" + recentScore[0].beatmapset_id + "/covers/cover.jpg")
             .setTimestamp(kali.toGMTString())
-            .setFooter(user[0].username, "https://cdn.troke.id/static/logos/text-white.png")
+            .setFooter(user[0].username, "https://cdn.datenshi.pw/static/logos/text-white.png")
             .addField("PP:", formatNumber(Math.round(0.0 + recentScore[0].pp)), true)
             .addField("Score:", formatNumber(recentScore[0].score), true)
             .addField("Accuracy:", recentScore[0].accuracy.toFixed(2) + "%", true)
@@ -135,7 +135,7 @@ const subcommands = {
             .addField("Artist:", recentScore[0].artist)
             .addField("Title:", recentScore[0].title)
             .addField("Difficulty:", recentScore[0].difficulty_name)
-            .addField("Download Beatmap:", "[osu!](https://osu.ppy.sh/d/" + recentScore[0].beatmapset_id +") • [beatconnect](https://beatconnect.io/b/" + recentScore[0].beatmapset_id +") • [datenshi](https://osu.troke.id/d/" + recentScore[0].beatmapset_id +")")
+            .addField("Download Beatmap:", "[osu!](https://osu.ppy.sh/d/" + recentScore[0].beatmapset_id +") • [beatconnect](https://beatconnect.io/b/" + recentScore[0].beatmapset_id +") • [datenshi](https://osu.datenshi.pw/d/" + recentScore[0].beatmapset_id +")")
             message.channel.send(embed);
         } catch (ex) {
             message.channel.send("User not found, please @link first!");

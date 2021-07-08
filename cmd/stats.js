@@ -53,9 +53,9 @@ const subcommands = {
             const formatNumber = (num) => (num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
             const embed = new Discord.MessageEmbed()
             .setTitle("Stats for " + user[0].username)
-            .setURL("https://osu.troke.id/u/" + user[0].id)
+            .setURL("https://osu.datenshi.pw/u/" + user[0].id)
             .setColor(hex)
-            .setThumbnail("https://a.troke.id/" + user[0].id)
+            .setThumbnail("https://a.datenshi.pw/" + user[0].id)
             .addField("**Stats**", "Username : " + user[0].username + "\nUserID : " + user[0].id + "\nJoined : " + kali.toGMTString() + "\nCountry : " + userStats[0].country + "")
             .addField("**Performance Points**","<:modeosu:800724455579713536> : " + formatNumber(userStats[0].pp_std) + "pp ▸ (" + userStats[0].avg_accuracy_std.toFixed(2) + "%)\n<:modemania:800724455126335538> : " + formatNumber(userStats[0].pp_mania) + "pp ▸ (" + userStats[0].avg_accuracy_mania.toFixed(2) + "%)\n<:modetaiko:800724456070447196> : " + formatNumber(userStats[0].pp_taiko) + "pp ▸ (" + userStats[0].avg_accuracy_taiko.toFixed(2) + "%)\n<:modefruits:800724454980190228> : " + formatNumber(userStats[0].pp_ctb) + "pp ▸ (" + userStats[0].avg_accuracy_ctb.toFixed(2) + "%)")
             .addField("**Ranked Scores**", "<:modeosu:800724455579713536> : " + formatNumber(userStats[0].ranked_score_std) + " ▸ (Lv. " + userStats[0].level_std + ")\n<:modemania:800724455126335538> : " + formatNumber(userStats[0].ranked_score_mania) + " ▸ (Lv. " + userStats[0].level_mania + ")\n<:modetaiko:800724456070447196> : " + formatNumber(userStats[0].ranked_score_taiko) + " ▸ (Lv. " + userStats[0].level_taiko + ")\n<:modefruits:800724454980190228> : " + formatNumber(userStats[0].ranked_score_ctb) + " ▸ (Lv. " + userStats[0].level_mania + ")")
@@ -84,9 +84,9 @@ const subcommands = {
             const formatNumber = (num) => (num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
             const embed = new Discord.MessageEmbed()
             .setTitle("Stats for " + user[0].username)
-            .setURL("https://osu.troke.id/rx/u/" + user[0].id)
+            .setURL("https://osu.datenshi.pw/rx/u/" + user[0].id)
             .setColor(hex)
-            .setThumbnail("https://a.troke.id/" + user[0].id)
+            .setThumbnail("https://a.datenshi.pw/" + user[0].id)
             .addField("**Stats**", "Username : " + user[0].username + "\nUserID : " + user[0].id + "\nJoined : " + kali.toGMTString() + "\nCountry : " + contri[0].country + "")
             .addField("**Performance Points**","<:modeosu:800724455579713536> : " + formatNumber(userStats[0].pp_std) + "pp ▸ (" + userStats[0].avg_accuracy_std.toFixed(2) + "%)\n<:modetaiko:800724456070447196> : " + formatNumber(userStats[0].pp_taiko) + "pp ▸ (" + userStats[0].avg_accuracy_taiko.toFixed(2) + "%)\n<:modefruits:800724454980190228> : " + formatNumber(userStats[0].pp_ctb) + "pp ▸ (" + userStats[0].avg_accuracy_ctb.toFixed(2) + "%)")
             .addField("**Ranked Scores**", "<:modeosu:800724455579713536> : " + formatNumber(userStats[0].ranked_score_std) + " ▸ (Lv. " + userStats[0].level_std + ")\n<:modetaiko:800724456070447196> : " + formatNumber(userStats[0].ranked_score_taiko) + " ▸ (Lv. " + userStats[0].level_taiko + ")\n<:modefruits:800724454980190228> : " + formatNumber(userStats[0].ranked_score_ctb) + " ▸ (Lv. " + userStats[0].level_mania + ")")
